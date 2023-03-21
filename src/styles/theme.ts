@@ -19,18 +19,22 @@ export default {
       large: '1.8rem',
       xlarge: '2.0rem',
       xxlarge: '2.8rem'
+    },
+    colors: {
+      dark: 'rgba(0,0,0,0.5)',
+      light: 'rgba(255,255,255,0.5)',
     }
   },
   colors: {
     primary: '#ffcd2a',
     secondary: '#0099db',
-    gray: '#f1f1f1',
+    tertiary: '#01a95d',
+    quaternary: '#eb268f',
     lightGray: '#d3d3d3',
+    gray: '#b0b0b0',
     darkGray: '#7f7f7f',
     white: '#fafafa',
     black: '#191919',
-    text: 'rgba(0,0,0,0.5)',
-    textLight: 'rgba(255,255,255,0.5)',
     divider: 'rgba(255,255,255,0.1)',
     placeholder: 'rgba(0,0,0,.4)',
     inputBorder: '#CFCFCF',
