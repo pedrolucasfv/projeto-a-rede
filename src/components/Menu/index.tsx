@@ -19,7 +19,7 @@ const Menu = () => {
 
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
-          <S.MenuLink href="/">home</S.MenuLink>
+          <S.MenuLink href="/">Início</S.MenuLink>
           <S.MenuLink href="/">Oficinas</S.MenuLink>
           <S.MenuLink href="/">Ações</S.MenuLink>
           <S.MenuLink href="/">Expedição Sertão</S.MenuLink>
@@ -27,7 +27,7 @@ const Menu = () => {
       </MediaMatch>
 
       <S.MenuGroup>
-        <a>Seja Voluntário</a>
+        <S.MenuLink href="/">Seja Voluntário</S.MenuLink>
       </S.MenuGroup>
 
       <S.MenuToggle aria-hidden={!isMenuOpen} isOpenMenu={isMenuOpen}>
@@ -36,7 +36,7 @@ const Menu = () => {
           onClick={() => setIsMenuOpen(false)}
         />
         <S.MenuNav>
-        <S.MenuLink href="/">home</S.MenuLink>
+        <S.MenuLink href="/">Início</S.MenuLink>
           <S.MenuLink href="/">Oficinas</S.MenuLink>
           <S.MenuLink href="/">Ações</S.MenuLink>
           <S.MenuLink href="/">Expedição Sertão</S.MenuLink>
