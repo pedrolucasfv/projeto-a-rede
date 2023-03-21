@@ -1,8 +1,8 @@
-import Menu from "../components/Menu/index";
+import Footer from "../components/Footer";
 
-export default function Home() {
+export default function Test() {
     return (
-      <Menu />
+      <Footer />
     )
   }
   
