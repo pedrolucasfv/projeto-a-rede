@@ -41,6 +41,7 @@ export const Text = styled.h4`
 type ImageProps = {
   src: string;
 };
+
 export const Image = styled.div<ImageProps>`
   ${({ src }) => css`
     ${media.lessThan("medium")`
@@ -112,7 +113,7 @@ export const Info = styled.div`
 `;
 
 export const ContentInfo = styled.div`
-  margin-right: 7rem;
+  margin-right: 6rem;
 `;
 
 export const Copyright = styled.h2`

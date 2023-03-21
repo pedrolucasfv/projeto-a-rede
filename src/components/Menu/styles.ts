@@ -39,7 +39,6 @@ export const MenuLink = styled.a`
       color: ${theme.colors.primary};
     letter-spacing: 0.6rem;
     font-weight: 700;
-
     }
   `}
 `
