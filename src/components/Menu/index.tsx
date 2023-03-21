@@ -20,9 +20,9 @@ const Menu = () => {
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
           <S.MenuLink href="/">home</S.MenuLink>
-          <S.MenuLink href="/category/headphones">headphones</S.MenuLink>
-          <S.MenuLink href="/category/speakers">speakers</S.MenuLink>
-          <S.MenuLink href="/category/earphones">earphones</S.MenuLink>
+          <S.MenuLink href="/">Oficinas</S.MenuLink>
+          <S.MenuLink href="/">Ações</S.MenuLink>
+          <S.MenuLink href="/">Expedição Sertão</S.MenuLink>
         </S.MenuNav>
       </MediaMatch>
 
@@ -36,10 +36,10 @@ const Menu = () => {
           onClick={() => setIsMenuOpen(false)}
         />
         <S.MenuNav>
-          <S.MenuLink href="/">home</S.MenuLink>
-          <S.MenuLink href="/category/headphones">headphones</S.MenuLink>
-          <S.MenuLink href="/category/speakers">speakers</S.MenuLink>
-          <S.MenuLink href="/category/earphones">earphones</S.MenuLink>
+        <S.MenuLink href="/">home</S.MenuLink>
+          <S.MenuLink href="/">Oficinas</S.MenuLink>
+          <S.MenuLink href="/">Ações</S.MenuLink>
+          <S.MenuLink href="/">Expedição Sertão</S.MenuLink>
         </S.MenuNav>
       </S.MenuToggle>
       {isMenuOpen && <S.Sombra onClick={() => setIsMenuOpen(false)} />}

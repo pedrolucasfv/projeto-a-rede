@@ -9,6 +9,7 @@ export const Wrapper = styled.main`
     padding: ${theme.spacings.small} 2rem;
     background-color: ${theme.colors.black};
     border-bottom: solid 0.5rem ${theme.colors.secondary};
+    height: 10rem;
   `}
 `
 
@@ -21,7 +22,8 @@ export const Logo = styled.div`
   background-repeat: no-repeat;
 `
 
-export const MenuNav = styled.div``
+export const MenuNav = styled.div`
+`
 
 export const MenuLink = styled.a`
   ${({ theme }) => css`
@@ -30,10 +32,14 @@ export const MenuLink = styled.a`
     margin: 0.3rem 2.8rem 0;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.3rem;
     text-align: center;
+    transition: 0.5s letter-spacing;
     &:hover {
-      color: ${theme.colors.accent};
+      color: ${theme.colors.primary};
+    letter-spacing: 0.6rem;
+    font-weight: 700;
+
     }
   `}
 `

@@ -22,13 +22,12 @@ export default {
     }
   },
   colors: {
-    bg: '#fafafa',
-    accent: '#d87d4a',
-    accentLight: '#fbaf85',
+    primary: '#ffcd2a',
+    secondary: '#0099db',
     gray: '#f1f1f1',
     lightGray: '#d3d3d3',
     darkGray: '#7f7f7f',
-    white: '#fff',
+    white: '#fafafa',
     black: '#191919',
     text: 'rgba(0,0,0,0.5)',
     textLight: 'rgba(255,255,255,0.5)',
