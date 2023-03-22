@@ -25,7 +25,7 @@ const Menu = () => {
           <S.MenuLink href="/oficinas" type="secondary">
             Oficinas
           </S.MenuLink>
-          <S.MenuLink href="/" type="tertiary">
+          <S.MenuLink href="/acoes" type="tertiary">
             Ações
           </S.MenuLink>
           <S.MenuLink href="/" type="quaternary">
@@ -48,7 +48,7 @@ const Menu = () => {
         <S.MenuNav>
           <S.MenuLink href="/">Início</S.MenuLink>
           <S.MenuLink href="/oficinas">Oficinas</S.MenuLink>
-          <S.MenuLink href="/">Ações</S.MenuLink>
+          <S.MenuLink href="/acoes">Ações</S.MenuLink>
           <S.MenuLink href="/">Expedição Sertão</S.MenuLink>
         </S.MenuNav>
       </S.MenuToggle>

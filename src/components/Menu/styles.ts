@@ -8,7 +8,7 @@ export const Wrapper = styled.main`
     justify-content: space-between;
     padding: ${theme.spacings.small} 2rem;
     background-color: ${theme.colors.black};
-    border-bottom: solid 0.5rem ${theme.colors.secondary};
+    border-bottom: solid 0.5rem ${theme.colors.primary};
     height: 10rem;
   `}
 `;
