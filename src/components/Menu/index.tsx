@@ -19,15 +19,25 @@ const Menu = () => {
 
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
-          <S.MenuLink href="/">Início</S.MenuLink>
-          <S.MenuLink href="/">Oficinas</S.MenuLink>
-          <S.MenuLink href="/">Ações</S.MenuLink>
-          <S.MenuLink href="/">Expedição Sertão</S.MenuLink>
+          <S.MenuLink href="/" type="primary">
+            Início
+          </S.MenuLink>
+          <S.MenuLink href="/oficinas" type="secondary">
+            Oficinas
+          </S.MenuLink>
+          <S.MenuLink href="/" type="tertiary">
+            Ações
+          </S.MenuLink>
+          <S.MenuLink href="/" type="quaternary">
+            Expedição Sertão
+          </S.MenuLink>
         </S.MenuNav>
       </MediaMatch>
 
       <S.MenuGroup>
-        <S.MenuLink href="/">Seja Voluntário</S.MenuLink>
+        <S.MenuLink href="/" type="all">
+          Seja Voluntário
+        </S.MenuLink>
       </S.MenuGroup>
 
       <S.MenuToggle aria-hidden={!isMenuOpen} isOpenMenu={isMenuOpen}>
@@ -36,8 +46,8 @@ const Menu = () => {
           onClick={() => setIsMenuOpen(false)}
         />
         <S.MenuNav>
-        <S.MenuLink href="/">Início</S.MenuLink>
-          <S.MenuLink href="/">Oficinas</S.MenuLink>
+          <S.MenuLink href="/">Início</S.MenuLink>
+          <S.MenuLink href="/oficinas">Oficinas</S.MenuLink>
           <S.MenuLink href="/">Ações</S.MenuLink>
           <S.MenuLink href="/">Expedição Sertão</S.MenuLink>
         </S.MenuNav>

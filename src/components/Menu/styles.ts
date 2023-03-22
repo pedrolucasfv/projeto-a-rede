@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import styled, { css } from "styled-components";
+import media from "styled-media-query";
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
@@ -11,59 +11,78 @@ export const Wrapper = styled.main`
     border-bottom: solid 0.5rem ${theme.colors.secondary};
     height: 10rem;
   `}
-`
+`;
 
 export const Logo = styled.div`
   margin-top: 0.6rem;
   height: 8rem;
   width: 8rem;
-  background-image: url('/img/logo.png');
+  background-image: url("/img/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
-`
+`;
 
-export const MenuNav = styled.div`
-`
+export const MenuNav = styled.div``;
+type MenuLinkProps = {
+  type?: "primary" | "secondary" | "tertiary" | "quaternary" | "all";
+};
 
-export const MenuLink = styled.a`
-  ${({ theme }) => css`
+export const MenuLink = styled.a<MenuLinkProps>`
+  ${({ theme, type }) => css`
     color: ${theme.colors.white};
     font-size: 1.4rem;
     margin: 0.3rem 2.8rem 0;
+    padding: 3rem 2rem;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.4rem;
     text-align: center;
-    transition: 0.5s letter-spacing;
+    transition: 0.5s letter-spacing, 0.5s font-size;
+
     &:hover {
-      color: ${theme.colors.primary};
-    letter-spacing: 0.6rem;
-    font-weight: 700;
+      letter-spacing: 0.6rem;
+      font-weight: 700;
+
+      ${type == "primary" &&
+      css`
+        color: ${theme.colors.primary};
+      `}
+      ${type == "secondary" &&
+      css`
+        color: ${theme.colors.secondary};
+      `}
+      ${type == "tertiary" &&
+      css`
+        color: ${theme.colors.tertiary};
+      `}
+      ${type == "quaternary" &&
+      css`
+        color: ${theme.colors.quaternary};
+      `}
+      ${type == "all" &&
+      css`
+        font-size: 1.8rem;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(
+          90deg,
+          rgba(200, 50, 114, 1) 0%,
+          rgba(6, 123, 177, 1) 36%,
+          rgba(1, 169, 93, 1) 61%,
+          rgba(255, 205, 42, 1) 100%
+        );
+      `}
     }
   `}
-`
-
-
-
+`;
 
 export const MenuGroup = styled.div`
-  ${({ theme }) => css`
-    position: relative;
-    color: white;
-    display: flex;
-    svg {
-      margin-right: 1rem;
-      cursor: pointer;
-      &:hover {
-        color: ${theme.colors.accent};
-      }
-    }
-  `}
-`
+
+`;
 
 type MenuToggleProps = {
-  isOpenMenu: boolean
-}
+  isOpenMenu: boolean;
+};
 export const MenuToggle = styled.nav<MenuToggleProps>`
   ${({ isOpenMenu }) => css`
     background-color: white;
@@ -80,7 +99,7 @@ export const MenuToggle = styled.nav<MenuToggleProps>`
     height: 100vh;
     transition: opacity 0.3s ease-in-out;
     opacity: ${isOpenMenu ? 1 : 0};
-    pointer-events: ${isOpenMenu ? 'all' : 'none'};
+    pointer-events: ${isOpenMenu ? "all" : "none"};
 
     > svg {
       margin: 1.5rem;
@@ -101,11 +120,11 @@ export const MenuToggle = styled.nav<MenuToggleProps>`
       font-weight: bold;
       font-size: 1.2rem;
       margin-bottom: 1rem;
-      transform: ${isOpenMenu ? 'translateY(0)' : 'translateY(3rem)'};
+      transform: ${isOpenMenu ? "translateY(0)" : "translateY(3rem)"};
       transition: transform 0.3s ease-in-out;
     }
   `}
-`
+`;
 
 export const Sombra = styled.div`
   position: absolute;
@@ -115,9 +134,7 @@ export const Sombra = styled.div`
   left: 0;
   top: 0;
   z-index: 40;
-`
+`;
 type AccountProps = {
-  isAccountOpen: boolean
-}
-
-
+  isAccountOpen: boolean;
+};

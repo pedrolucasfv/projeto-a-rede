@@ -27,7 +27,6 @@ export const RightContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -5rem;
 `;
 export const Text = styled.h4`
   font-size: 2.5rem;
