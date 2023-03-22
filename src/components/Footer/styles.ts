@@ -117,10 +117,20 @@ export const ContentInfo = styled.div`
 `;
 
 export const Copyright = styled.h2`
+  color: #a2a2a2;
+  font-size: 1.7rem;
+
+  span {
+      font-size: 1.4rem;
+  }
+`;
+
+export const CopyrightContent = styled.div`
   grid-column: 1/3;
   grid-row: 3;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #a2a2a2;
+
 `;
