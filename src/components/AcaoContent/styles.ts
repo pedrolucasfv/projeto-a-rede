@@ -85,7 +85,7 @@ type ButtonProps = {
   color: "primary" | "secondary" | "tertiary" | "quaternary";
 };
 
-export const Button = styled.div<ButtonProps>`
+export const Button = styled.a<ButtonProps>`
   ${({ theme, color }) => css`
     color: ${theme.colors.black};
     font-weight: ${theme.font.bold};
