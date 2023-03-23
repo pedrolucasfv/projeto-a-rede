@@ -6,11 +6,15 @@ import { CloseOutline as CloseIcon } from "@styled-icons/evaicons-outline/CloseO
 
 import { useState } from "react";
 
-const Menu = () => {
+export type MenuProps = {
+  border?: boolean;
+};
+
+const Menu = ({ border = false }: MenuProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <S.Wrapper>
+    <S.Wrapper border={border}>
       <MediaMatch lessThan="medium" onClick={() => setIsMenuOpen(true)}>
         <MenuIcon size={18} color="white" aria-label="open menu" />
       </MediaMatch>
@@ -28,7 +32,7 @@ const Menu = () => {
           <S.MenuLink href="/acoes" type="tertiary">
             Ações
           </S.MenuLink>
-          <S.MenuLink href="/" type="quaternary">
+          <S.MenuLink href="/expedicao-sertao" type="quaternary">
             Expedição Sertão
           </S.MenuLink>
         </S.MenuNav>
@@ -46,10 +50,18 @@ const Menu = () => {
           onClick={() => setIsMenuOpen(false)}
         />
         <S.MenuNav>
-          <S.MenuLink href="/">Início</S.MenuLink>
-          <S.MenuLink href="/oficinas">Oficinas</S.MenuLink>
-          <S.MenuLink href="/acoes">Ações</S.MenuLink>
-          <S.MenuLink href="/">Expedição Sertão</S.MenuLink>
+          <S.MenuLink href="/" type="primary">
+            Início
+          </S.MenuLink>
+          <S.MenuLink href="/oficinas" type="secondary">
+            Oficinas
+          </S.MenuLink>
+          <S.MenuLink href="/acoes" type="tertiary">
+            Ações
+          </S.MenuLink>
+          <S.MenuLink href="/expedicao-sertao" type="quaternary">
+            Expedição Sertão
+          </S.MenuLink>
         </S.MenuNav>
       </S.MenuToggle>
       {isMenuOpen && <S.Sombra onClick={() => setIsMenuOpen(false)} />}

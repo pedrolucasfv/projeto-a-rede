@@ -6,7 +6,7 @@ import * as S from './styles'
 const Home = () => {
   return (
     <S.Wrapper>
-      <Menu />
+      <Menu border />
       <Banner />
       <Footer />
     </S.Wrapper>

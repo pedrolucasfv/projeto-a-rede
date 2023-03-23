@@ -1,15 +1,26 @@
 import styled, { css } from "styled-components";
 import media from "styled-media-query";
 
-export const Wrapper = styled.main`
-  ${({ theme }) => css`
+type WrapperProps = {
+  border: boolean;
+};
+
+export const Wrapper = styled.main<WrapperProps>`
+  ${({ theme, border }) => css`
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: ${theme.spacings.small} 2rem;
     background-color: ${theme.colors.black};
-    border-bottom: solid 0.5rem ${theme.colors.primary};
     height: 10rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    border-bottom: none;
+    ${border &&
+    css`
+      border-bottom: solid 0.5rem ${theme.colors.tertiary};
+    `}
   `}
 `;
 
@@ -76,9 +87,7 @@ export const MenuLink = styled.a<MenuLinkProps>`
   `}
 `;
 
-export const MenuGroup = styled.div`
-
-`;
+export const MenuGroup = styled.div``;
 
 type MenuToggleProps = {
   isOpenMenu: boolean;
