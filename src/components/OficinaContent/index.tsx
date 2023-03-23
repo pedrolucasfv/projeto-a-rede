@@ -6,7 +6,8 @@ export type OficinaContentProps = {
   time?: string;
   available?: boolean;
   image: string;
-  invert?: boolean
+  invert?: boolean;
+  age?: string;
 };
 
 const OficinaContent = ({
@@ -15,14 +16,15 @@ const OficinaContent = ({
   time,
   image,
   available = true,
-  invert = false
+  invert = false,
+  age
 }: OficinaContentProps) => (
   <S.Wrapper invert={invert}>
     <S.Info>
       {!available && <S.Title>Em breve!</S.Title>}
       <S.Name>{name}</S.Name>
       <S.Description>{description}</S.Description>
-      <S.TimeContent>{time}</S.TimeContent>
+      <S.TimeContent>{time}<br />{age}</S.TimeContent>
     </S.Info>
     <S.ImageBox>
       <S.Image src={image} />

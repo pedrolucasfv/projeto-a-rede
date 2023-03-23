@@ -7,10 +7,10 @@ type WrapperProps = {
 
 export const Wrapper = styled.main<WrapperProps>`
   ${({ theme, invert }) => css`
+    padding: 5rem 0;
     display: flex;
-    overflow: hidden;
     ${media.lessThan("medium")`
-    width: 35rem;
+    width: 40rem;
     grid-template-columns: 1fr;
     `}
     ${invert &&
@@ -19,6 +19,9 @@ export const Wrapper = styled.main<WrapperProps>`
       
     `}
     margin: 0 10rem;
+    div:nth-child(1) {
+      margin-right: 8rem;
+    }
   `}
 `;
 
@@ -87,14 +90,16 @@ type ImageProps = {
 };
 
 export const Image = styled.div<ImageProps>`
-  ${({ src }) => css`
+  ${({ src, theme}) => css`
     ${media.lessThan("medium")`
     height: 35rem;
     `}
-    height: 60rem;
-    width: 60rem;
+    height: 50rem;
+    width: 50rem;
     background-image: url(${src});
     background-position: center;
     background-size: cover;
+    border: solid 0.5rem ${theme.colors.secondary};
+    border-radius: 2rem;
   `}
 `;

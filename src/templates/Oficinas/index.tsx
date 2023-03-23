@@ -10,16 +10,18 @@ const Oficinas = () => {
       <Menu />
       <Divider title='OFICINAS' color="secondary"/>
       <OficinaContent
-      name="Inglês para crianças"
-      description="Essa é uma oficina para ensinar inglês as crianças carentes para capacitá-las e promover um futuro melhor a elas. O inglês é de suma imporância e abre muitas portas para oportunidades de melhoria de vida."
-      image='/img/logo.png'
-      time="seg a sex: 18:00 até 19:00"
+      name="Aulas de inglês"
+      description="Essa é uma oficina para ensinar inglês crianças carentes de 6 a 10 anos de idaded. Essas aulas ajudam a capacitá-las e promover um futuro melhor a elas. O inglês é de suma importância e abre muitas portas para oportunidades de melhoria de vida."
+      image='/img/aula-de-ingles-1.jpeg'
+      time="segunda-feira: 19:00 até 20:00"
+      age="De 06 a 10 anos"
     />
     <OficinaContent
-      name="Inglês para crianças"
+      name="Aulas de música"
       description="Essa é uma oficina para ensinar inglês as crianças carentes para capacitá-las e promover um futuro melhor a elas. O inglês é de suma imporância e abre muitas portas para oportunidades de melhoria de vida."
-      image='/img/logo.png'
-      time="seg a sex: 18:00 até 19:00"
+      image='/img/aula-de-canto-1.jpeg'
+      time="Terça-feira: 18:00 até 19:00"
+      age="De 07 a 15 anos"
       invert
     />
     <OficinaContent

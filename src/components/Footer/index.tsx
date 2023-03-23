@@ -1,27 +1,36 @@
 import * as S from "./styles";
-import { FacebookOutline as FacebookIcon } from "@styled-icons/evaicons-outline/FacebookOutline";
-
+import {FacebookSquare as FacebookIcon} from '@styled-icons/boxicons-logos/FacebookSquare'
+import {Instagram as InstagramIcon} from '@styled-icons/boxicons-logos/Instagram'
 const Footer = () => (
   <S.Wrapper>
     <S.Info>
       <S.ContentInfo>
         <S.Heading type="primary">Localização</S.Heading>
-        <S.Text>Rua avenida josé alencar xucrute</S.Text>
+        <S.Text>
+          <span>Rua:</span> Demerval Teixeira da Fonseca
+        </S.Text>
+        <S.Text>
+          <span>Número:</span> 251
+        </S.Text>
+        <S.Text>
+          <span>Cidade:</span> Bom Jesus do Itabapoana
+        </S.Text>
+        <S.Text>
+          <span>Cep:</span> 28360-000
+        </S.Text>
       </S.ContentInfo>
       <S.ContentInfo>
         <S.Heading type="tertiary">Redes Sociais</S.Heading>
-        <S.Text>
-          FACEBOOK: <FacebookIcon size={30} />
-        </S.Text>
-        <S.Text>
-          INSTAGRAM: <FacebookIcon size={30} />
-        </S.Text>
-        <S.Text>
-          TWITTER: <FacebookIcon size={30} />
-        </S.Text>
-        <S.Text>
-          LINKEDIN: <FacebookIcon size={30} />
-        </S.Text>
+        <S.Subtitle className="primeiroItem">Projeto A Rede</S.Subtitle>
+        <S.SocialNetwork>
+        <FacebookIcon size={50} />
+        <InstagramIcon size={50} />
+        </S.SocialNetwork>
+        <S.Subtitle>Expedição Sertão</S.Subtitle>
+        <S.SocialNetwork>
+        <FacebookIcon size={50} />
+        <InstagramIcon size={50} />
+        </S.SocialNetwork>
       </S.ContentInfo>
       <S.ContentInfo>
         <S.Heading type="quaternary">Doações</S.Heading>

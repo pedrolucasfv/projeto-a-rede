@@ -33,11 +33,31 @@ export const Text = styled.h4`
   font-weight: 500;
   justify-content: flex-start;
   align-items: flex-end;
+  margin-bottom: 0.5rem;
+  span {
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
   svg {
     margin-left: 2rem;
   }
 `;
 
+export const Subtitle = styled.h3`
+  ${({ theme }) => css`
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    border-bottom: solid 0.1rem gray;
+    padding-bottom: 1rem;
+    color: ${theme.colors.black};
+  `}
+`;
+
+export const SocialNetwork = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+`;
 type ImageProps = {
   src: string;
 };
@@ -114,6 +134,9 @@ export const Info = styled.div`
 
 export const ContentInfo = styled.div`
   margin-right: 6rem;
+  .primeiroItem {
+    margin-top: -1.5rem;
+  }
 `;
 
 export const Copyright = styled.h2`
@@ -121,7 +144,7 @@ export const Copyright = styled.h2`
   font-size: 1.7rem;
 
   span {
-      font-size: 1.4rem;
+    font-size: 1.4rem;
   }
 `;
 
@@ -132,5 +155,4 @@ export const CopyrightContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 `;
