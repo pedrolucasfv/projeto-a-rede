@@ -1,3 +1,4 @@
+import Divider from "../Divider";
 import * as S from "./styles";
 
 const Banner = () => (
@@ -12,9 +13,7 @@ const Banner = () => (
       </S.Text>
     </S.LeftContent>
     <S.RightContent>
-      <S.Image />
-      <S.Title>A REDE</S.Title>
-      <S.Subtitle>SEMEANDO EXPERANÇA</S.Subtitle>
+      <Divider title={["rede"]} color="primary" />
     </S.RightContent>
   </S.Wrapper>
 );

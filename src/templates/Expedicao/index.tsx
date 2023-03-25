@@ -11,7 +11,7 @@ export const Expedicao = () => {
   return (
     <S.Wrapper>
       <Menu />
-      <Divider title="Expedição Sertão" color="quaternary" />
+      <Divider title={["expedição", "sertão"]} color="quaternary" />
     </S.Wrapper>
   );
 };

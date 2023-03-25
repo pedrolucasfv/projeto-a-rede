@@ -3,15 +3,8 @@ import media from "styled-media-query";
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
-    background: linear-gradient(
-      to top left,
-      #e3e3e3,
-      #dedede,
-      #e5e5e5,
-      #ececec,
-      #f5f5f5
-    );
-    color: #282828;
+    background-color: ${theme.colors.black};
+    color: ${theme.colors.white};
 
     ${media.greaterThan("medium")`
     display: grid;
@@ -49,7 +42,6 @@ export const Subtitle = styled.h3`
     font-size: 2rem;
     border-bottom: solid 0.1rem gray;
     padding-bottom: 1rem;
-    color: ${theme.colors.black};
   `}
 `;
 

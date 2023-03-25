@@ -2,7 +2,7 @@ import * as S from "./styles";
 import { useState, useEffect } from "react";
 
 export type DividerProps = {
-  title: string;
+  title: string[];
   color: "primary" | "secondary" | "tertiary" | "quaternary";
 };
 
@@ -22,14 +22,17 @@ const Divider = ({ title, color }: DividerProps) => {
       <S.BorderMenu color={color} />
       <S.BorderContent color={color}>
         <S.Content>
-          <S.Title
-            color={color}
-            fallLiquid={fallLiquid}
-            animateLiquid={animateLiquid}
-          >
-            <span>{title}</span>
-            <span>{title}</span>
-          </S.Title>
+          {title.map((item, index) => (
+            <S.Title
+              color={color}
+              fallLiquid={fallLiquid}
+              animateLiquid={animateLiquid}
+              key={index}
+            >
+              <span>{item}</span>
+              <span>{item}</span>
+            </S.Title>
+          ))}
         </S.Content>
       </S.BorderContent>
     </S.Wrapper>

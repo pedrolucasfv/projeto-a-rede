@@ -19,8 +19,12 @@ export const Wrapper = styled.main<WrapperProps>`
     border-bottom: none;
     ${border &&
     css`
-      border-bottom: solid 0.5rem ${theme.colors.tertiary};
+      border-bottom: none;
     `}
+    @media (min-width: 1500px) {
+      padding-right: 13%;
+      padding-left: 13%; 
+  }
   `}
 `;
 

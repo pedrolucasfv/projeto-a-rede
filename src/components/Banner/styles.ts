@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import media from "styled-media-query";
+import { BorderContent } from "../Divider/styles";
 
 export const Wrapper = styled.main`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
   color: white;
   background: linear-gradient(
     80deg,
@@ -13,7 +14,7 @@ export const Wrapper = styled.main`
     rgba(248, 204, 43, 1) 71%,
     rgba(255, 179, 0, 1) 100%
   );
-  height: calc(100vh - 10rem);
+  height: 100vh;
 `;
 
 export const LeftContent = styled.div`
@@ -24,9 +25,9 @@ export const LeftContent = styled.div`
 
 export const RightContent = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  ${BorderContent} {
+    height: 80rem;
+  }
 `;
 export const Text = styled.h4`
   font-size: 2.5rem;

@@ -34,6 +34,7 @@ const colorModifiers = {
 export const BorderMenu = styled.div<ColorProps>`
   ${({ color }) => css`
     height: 10.5rem;
+    width: 100vh;
     z-index: 20;
     ${color && colorModifiers[color]()};
   `}
@@ -63,6 +64,12 @@ export const Content = styled.div`
     100% {
       transform: translateY(0%);
     }
+  }
+  div:nth-child(1) {
+    margin-top: -10rem;
+  }
+  div:nth-child(2) {
+    margin-top: 20rem;
   }
 `;
 
@@ -115,7 +122,7 @@ export const Title = styled.div<TitleProps>`
     font-weight: 700;
     max-width: 100rem;
     margin-bottom: 8rem;
-    position: relative;
+    text-transform: uppercase;
     span {
       position: absolute;
       color: #fff;
