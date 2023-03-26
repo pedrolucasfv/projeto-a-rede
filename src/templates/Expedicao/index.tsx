@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import Divider from "../../components/Divider";
 import Menu from "../../components/Menu";
 
@@ -12,6 +13,7 @@ export const Expedicao = () => {
     <S.Wrapper>
       <Menu />
       <Divider title={["expedição", "sertão"]} color="quaternary" />
+      <Footer color="quaternary"/>
     </S.Wrapper>
   );
 };

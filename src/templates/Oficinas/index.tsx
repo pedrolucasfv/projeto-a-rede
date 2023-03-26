@@ -39,7 +39,7 @@ const Oficinas = () => {
         image="/img/aula-de-informatica.jpeg"
         invert
       />
-      <Footer />
+      <Footer color="secondary" />
     </S.Wrapper>
   );
 };

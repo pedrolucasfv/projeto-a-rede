@@ -1,8 +1,24 @@
+import theme from "../../styles/theme";
 import styled, { css } from "styled-components";
 import media from "styled-media-query";
 
-export const Wrapper = styled.main`
-  ${({ theme }) => css`
+const colorModifiers = {
+  primary: () => css`
+    border-color: ${theme.colors.primary};
+  `,
+  secondary: () => css`
+    border-color: ${theme.colors.secondary};
+  `,
+  tertiary: () => css`
+    border-color: ${theme.colors.tertiary};
+  `,
+  quaternary: () => css`
+    border-color: ${theme.colors.quaternary};
+  `,
+};
+
+export const Wrapper = styled.main<ColorProps>`
+  ${({ theme, color }) => css`
     background-color: ${theme.colors.black};
     color: ${theme.colors.white};
 
@@ -17,8 +33,11 @@ export const Wrapper = styled.main`
     `}
     border-top: 0.6rem solid ${theme.colors.secondary};
     padding: 2rem 4rem;
+    ${color && colorModifiers[color]()};
   `}
 `;
+
+
 
 export const Text = styled.h4`
   display: flex;
@@ -75,12 +94,12 @@ export const ContentImage = styled.div`
   justify-content: center;
   align-items: center;
 `;
-type HeadingProps = {
-  type: "primary" | "secondary" | "tertiary" | "quaternary";
+type ColorProps = {
+  color: "primary" | "secondary" | "tertiary" | "quaternary";
 };
 
-export const Heading = styled.h2<HeadingProps>`
-  ${({ theme, type }) => css`
+export const Heading = styled.h2<ColorProps>`
+  ${({ theme, color }) => css`
     position: relative;
     margin-bottom: ${theme.spacings.medium};
     font-size: 3rem;
@@ -91,22 +110,7 @@ export const Heading = styled.h2<HeadingProps>`
       content: "";
       width: 5rem;
       border-bottom: 0.5rem solid;
-      ${type == "primary" &&
-      css`
-        border-color: ${theme.colors.primary};
-      `}
-      ${type == "secondary" &&
-      css`
-        border-color: ${theme.colors.secondary};
-      `}
-      ${type == "tertiary" &&
-      css`
-        border-color: ${theme.colors.tertiary};
-      `}
-      ${type == "quaternary" &&
-      css`
-        border-color: ${theme.colors.quaternary};
-      `}
+      ${color && colorModifiers[color]()}
     }
   `}
 `;

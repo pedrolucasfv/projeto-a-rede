@@ -9,8 +9,6 @@ import VideoHome from "../../components/VideoHome";
 const Home = () => {
   //const [video, setVideo] = useState([true, false, false]);
 
-
-
   return (
     <S.Wrapper>
       <S.Menu>
@@ -18,9 +16,9 @@ const Home = () => {
       </S.Menu>
       <Banner />
       <S.VideoWrapper>
-      <VideoHome />
+        <VideoHome />
       </S.VideoWrapper>
-      <Footer />
+      <Footer color="primary" />
     </S.Wrapper>
   );
 };

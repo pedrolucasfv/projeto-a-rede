@@ -31,7 +31,7 @@ const Acoes = () => {
         image="/img/logo.png"
         invert
       />
-      <Footer />
+      <Footer color="tertiary" />
     </S.Wrapper>
   );
 };
