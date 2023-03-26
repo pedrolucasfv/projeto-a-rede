@@ -18,9 +18,9 @@ const Menu = ({ border = false }: MenuProps) => {
       <MediaMatch lessThan="medium" onClick={() => setIsMenuOpen(true)}>
         <MenuIcon size={18} color="white" aria-label="open menu" />
       </MediaMatch>
-
-      <S.Logo role="img" aria-label="Audiophile" />
-
+      <MediaMatch greaterThan="medium">
+        <S.Logo role="img" aria-label="Audiophile" />
+      </MediaMatch>
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
           <S.MenuLink href="/" type="primary">

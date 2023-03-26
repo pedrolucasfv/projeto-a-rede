@@ -2,10 +2,12 @@ import styled, { css } from "styled-components";
 import media from "styled-media-query";
 
 export const Wrapper = styled.main`
+  display: flex;
+  flex-direction: column;
+  ${media.greaterThan("medium")`
   display: grid;
   grid-template-columns: 1fr 1.5fr;
- 
-  height: 100vh;
+  `}
   padding-top: 10rem;
 `;
 
@@ -13,9 +15,15 @@ export const LeftContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${media.lessThan("medium")`
+    margin-top: 5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    `}
 `;
 
 export const RightContent = styled.div``;
+
 export const Text = styled.h4`
   font-size: 2.5rem;
   letter-spacing: 0.1rem;
@@ -28,21 +36,32 @@ export const ImageWrapper = styled.div`
   height: 40rem;
   margin-top: -10rem;
   ${media.lessThan("medium")`
-      width: 35rem;
-      margin-left: 1.5rem;
-      margin-bottom: 1.5rem;
+      width: 25rem;
+      height: 25rem;
     `}
+  @media (max-width: 400px) {
+    width: 20rem;
+    height: 20rem;
+    margin-top: -5rem;
+  }
   position: relative;
 `;
 
 export const TextContent = styled.div`
   div:nth-child(1) {
     margin-top: 1rem;
-    
     font-size: 10rem;
+    ${media.lessThan("medium")`
+    font-size: 5rem;
+    `}
   }
+
   div:nth-child(2) {
     font-size: 3rem;
+    ${media.lessThan("medium")`
+    margin-top: -3rem;
+    font-size: 1.5rem;
+    `}
   }
 `;
 export const BorderMenu = styled.div`
@@ -90,6 +109,9 @@ export const BorderContent = styled.div`
     margin-top: -0.5rem;
     position: relative;
     height: 80vh;
+    ${media.lessThan("medium")`
+    height: 40vh;
+    `}
     -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
     clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
     animation: fallDown 2s forwards;

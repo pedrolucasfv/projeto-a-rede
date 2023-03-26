@@ -42,10 +42,19 @@ export const VideoContent = styled.div`
   border: 0.5rem solid ${theme.colors.primary};
   border-radius: 1rem;
   background-color: black;
+  ${media.lessThan("medium")`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    `}
   video {
     margin-top: 0.5rem;
-  border-radius: 1rem;
-
+    border-radius: 1rem;
+    
+    width: 22.5rem;
+    height: 40rem;
   }
   `}
 `;

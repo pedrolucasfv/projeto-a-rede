@@ -38,6 +38,7 @@ export const Logo = styled.div`
 `;
 
 export const MenuNav = styled.div``;
+
 type MenuLinkProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary" | "all";
 };
@@ -53,7 +54,6 @@ export const MenuLink = styled.a<MenuLinkProps>`
     letter-spacing: 0.4rem;
     text-align: center;
     transition: 0.5s letter-spacing, 0.5s font-size;
-
     &:hover {
       letter-spacing: 0.6rem;
       font-weight: 700;
@@ -107,6 +107,7 @@ export const MenuToggle = styled.nav<MenuToggleProps>`
     width: 42%;
     left: 0;
     top: 0;
+    color: black;
 
     bottom: 0;
     height: 100vh;

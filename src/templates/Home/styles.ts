@@ -10,11 +10,11 @@ export const Wrapper = styled.section`
       #ececec,
       #f5f5f5
     );
-    //color: white;
 `
 
 export const Content = styled.div`
-    width: 50%;`
+    width: 50%;
+`
 
 export const Menu = styled.div`
 `
