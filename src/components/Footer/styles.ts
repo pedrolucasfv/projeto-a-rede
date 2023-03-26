@@ -114,7 +114,9 @@ export const Heading = styled.h2<HeadingProps>`
 export const Info = styled.div`
   grid-row: 2;
   display: flex;
-  padding: 0 5rem;
+  ${media.greaterThan("huge")`
+    padding: 0 5rem;
+  `}
   justify-content: flex-start;
   align-items: flex-start;
 
