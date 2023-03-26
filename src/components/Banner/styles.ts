@@ -5,10 +5,9 @@ export const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   ${media.greaterThan("medium")`
-    
-  `}
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.5fr;  
+  `}
   padding-top: 10rem;
 `;
 
