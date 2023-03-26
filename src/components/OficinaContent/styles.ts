@@ -1,29 +1,37 @@
 import styled, { css } from "styled-components";
 import media from "styled-media-query";
 
-type WrapperProps = {
+type InvertProps = {
   invert: boolean;
 };
 
-export const Wrapper = styled.main<WrapperProps>`
-  ${({ theme, invert }) => css`
-    padding: 5rem 0;
+export const Wrapper = styled.main`
+  ${({ theme }) => css`
+    padding: 5rem 5rem;
+    background: ${theme.colors.black};
+    border: 0.7rem solid ${theme.colors.secondary};
+    border-radius: 1rem;
+    width: 85%;
+    margin: 7rem auto;
+  `}
+`;
+
+export const Content = styled.div<InvertProps>`
+  ${({ invert }) => css`
     display: flex;
+    padding-bottom: 10rem;
     ${media.lessThan("medium")`
     width: 40rem;
-    grid-template-columns: 1fr;
     `}
     ${invert &&
     css`
       flex-direction: row-reverse;
     `}
-    margin: 0 10rem;
     div:nth-child(1) {
       margin-right: 8rem;
     }
   `}
 `;
-
 export const Info = styled.div`
   ${({ theme }) => css`
     display: flex;
@@ -39,18 +47,11 @@ export const Info = styled.div`
   `}
 `;
 
-export const Title = styled.h4`
-  ${({ theme }) => css`
-    letter-spacing: ${theme.spacings.xxsmall};
-    font-size: ${theme.font.sizes.large};
-    text-transform: uppercase;
-    color: ${theme.colors.tertiary};
-  `}
-`;
 
 export const Name = styled.h2`
   ${({ theme }) => css`
     font-size: 5.5rem;
+    color: ${theme.colors.secondary};
     margin: ${theme.spacings.xsmall} 0;
     ${media.lessThan("medium")`
     font-size: 4rem;
@@ -75,14 +76,12 @@ export const TimeContent = styled.div`
     font-size: ${theme.font.sizes.large};
     font-weight: ${theme.font.bold};
     margin-bottom: ${theme.spacings.large};
-    color: ${theme.colors.dark};
+    color: ${theme.colors.white};
     ${media.lessThan("medium")`
     text-align: center;
     `}
   `}
 `;
-
-export const ImageBox = styled.div``;
 
 type ImageProps = {
   src: string;
@@ -90,11 +89,37 @@ type ImageProps = {
 
 export const ImageWrapper = styled.div`
   ${({ theme }) => css`
-    ${media.lessThan("medium")`
-    height: 35rem;
-    `}
     height: 50rem;
     width: 100%;
+    ${media.greaterThan("medium")`
+      min-width: 40rem;
+    `}
+    ${media.lessThan("medium")`
+     height: 35rem;
+    `}
+    ${media.greaterThan("huge")`
+    width: 70rem;
+    `}
+    position: relative;
+    border: solid 0.5rem ${theme.colors.secondary};
+    border-radius: 1rem;
+  `}
+`;
+
+export const SecondaryImageContent = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+  `}
+`;
+
+export const SecondaryImage = styled.div`
+  ${({ theme }) => css`
+    height: 20rem;
+    width: 30rem;
+    margin-right: 3rem;
+    ${media.lessThan("medium")`
+     height: 35rem;
+    `}
     ${media.greaterThan("huge")`
     width: 70rem;
     `}
