@@ -5,13 +5,16 @@ export const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   ${media.greaterThan("medium")`
+    
+  `}
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  `}
   padding-top: 10rem;
 `;
 
 export const LeftContent = styled.div`
+  grid-column: 1;
+  grid-row: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,10 +22,12 @@ export const LeftContent = styled.div`
     margin-top: 5rem;
     padding-right: 2rem;
     padding-left: 2rem;
-    `}
+  `}
 `;
 
-export const RightContent = styled.div``;
+export const RightContent = styled.div`
+  grid-column: 2;
+`;
 
 export const Text = styled.h4`
   font-size: 2.5rem;
