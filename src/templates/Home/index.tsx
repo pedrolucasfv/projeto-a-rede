@@ -3,9 +3,14 @@ import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Menu from "../../components/Menu";
 import * as S from "./styles";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+import VideoHome from "../../components/VideoHome";
 
 const Home = () => {
+  //const [video, setVideo] = useState([true, false, false]);
+
+
+
   return (
     <S.Wrapper>
       <S.Menu>
@@ -13,7 +18,7 @@ const Home = () => {
       </S.Menu>
       <Banner />
       <S.VideoWrapper>
-       <video controls autoPlay={true} src="/img/video-home.mp4" style={{ width: "400px", height: "400px" }} />
+      <VideoHome />
       </S.VideoWrapper>
       <Footer />
     </S.Wrapper>

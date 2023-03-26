@@ -20,16 +20,9 @@ export const Menu = styled.div`
 `
 
 export const VideoWrapper = styled.div`
-    ${media.lessThan("medium")`
-    height: 35rem;
-    `}
-    height: 50rem;
-    width: 100%;
-    ${media.greaterThan("huge")`
-    width: 70rem;
-    `}
-    position: relative;
+    
 `;
+
 
 /*
 background: linear-gradient(
