@@ -34,7 +34,6 @@ const colorModifiers = {
 export const BorderMenu = styled.div<ColorProps>`
   ${({ color }) => css`
     height: 10.5rem;
-    width: 100vh;
     z-index: 20;
     ${color && colorModifiers[color]()};
   `}
@@ -54,9 +53,6 @@ export const Content = styled.div`
   clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
   background-color: ${theme.colors.black};
   animation: fallDown 2s forwards;
-  overflow: hidden;
-  text-align: center;
-  line-height: 13rem;
   @keyframes fallDown {
     0% {
       transform: translateY(-100%);

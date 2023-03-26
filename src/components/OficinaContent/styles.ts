@@ -15,8 +15,7 @@ export const Wrapper = styled.main<WrapperProps>`
     `}
     ${invert &&
     css`
-    flex-direction: row-reverse;
-      
+      flex-direction: row-reverse;
     `}
     margin: 0 10rem;
     div:nth-child(1) {
@@ -89,17 +88,18 @@ type ImageProps = {
   src: string;
 };
 
-export const Image = styled.div<ImageProps>`
-  ${({ src, theme}) => css`
+export const ImageWrapper = styled.div`
+  ${({ theme }) => css`
     ${media.lessThan("medium")`
     height: 35rem;
     `}
     height: 50rem;
-    width: 50rem;
-    background-image: url(${src});
-    background-position: center;
-    background-size: cover;
+    width: 100%;
+    ${media.greaterThan("huge")`
+    width: 70rem;
+    `}
+    position: relative;
     border: solid 0.5rem ${theme.colors.secondary};
-    border-radius: 2rem;
+    border-radius: 1rem;
   `}
 `;

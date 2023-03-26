@@ -4,15 +4,7 @@ import media from "styled-media-query";
 export const Wrapper = styled.main`
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  color: white;
-  background: linear-gradient(
-    80deg,
-    rgba(255, 179, 0, 1) 0%,
-    rgba(248, 204, 43, 1) 31%,
-    rgba(224, 184, 90, 1) 50%,
-    rgba(248, 204, 43, 1) 71%,
-    rgba(255, 179, 0, 1) 100%
-  );
+ 
   height: 100vh;
   padding-top: 10rem;
 `;

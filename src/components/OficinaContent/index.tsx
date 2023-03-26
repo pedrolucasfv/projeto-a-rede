@@ -1,3 +1,4 @@
+import Image from "next/image";
 import * as S from "./styles";
 
 export type OficinaContentProps = {
@@ -26,9 +27,14 @@ const OficinaContent = ({
       <S.Description>{description}</S.Description>
       <S.TimeContent>{time}<br />{age}</S.TimeContent>
     </S.Info>
-    <S.ImageBox>
-      <S.Image src={image} />
-    </S.ImageBox>
+    <S.ImageWrapper>
+        <Image
+          src={image}
+          alt='Logo da RF reboque'
+          layout="fill"
+          objectFit="cover"
+        />
+      </S.ImageWrapper>
   </S.Wrapper>
 );
 
