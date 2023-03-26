@@ -73,7 +73,7 @@ export const BorderContent = styled.div<ColorProps>`
   ${({ theme, color }) => css`
     margin-top: -0.5rem;
     position: relative;
-    height: 40rem;
+    height: 30rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
     clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
     animation: fallDown 2s forwards;
@@ -115,9 +115,9 @@ const textModifiers = {
 export const Title = styled.div<TitleProps>`
   ${({ color, theme, animateLiquid, fallLiquid }) => css`
     margin-top: 5rem;
+    margin-bottom: 5rem;
     font-weight: 700;
     max-width: 100rem;
-    margin-bottom: 8rem;
     text-transform: uppercase;
     span {
       position: absolute;
