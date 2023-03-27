@@ -6,15 +6,13 @@ import { CloseOutline as CloseIcon } from "@styled-icons/evaicons-outline/CloseO
 
 import { useState } from "react";
 
-export type MenuProps = {
-  border?: boolean;
-};
 
-const Menu = ({ border = false }: MenuProps) => {
+
+const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <S.Wrapper border={border}>
+    <S.Wrapper >
       <MediaMatch lessThan="medium" onClick={() => setIsMenuOpen(true)}>
         <MenuIcon size={18} color="white" aria-label="open menu" />
       </MediaMatch>

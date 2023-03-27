@@ -13,6 +13,11 @@ export const Wrapper = styled.main`
     border-radius: 1rem;
     width: 85%;
     margin: 7rem auto;
+    ${media.lessThan("medium")`
+    width: 100%;
+
+    padding: 1rem 5rem;
+    `}
   `}
 `;
 
@@ -20,15 +25,17 @@ export const Content = styled.div<InvertProps>`
   ${({ invert }) => css`
     display: flex;
     padding-bottom: 10rem;
-    ${media.lessThan("medium")`
-    width: 40rem;
-    `}
     ${invert &&
     css`
       flex-direction: row-reverse;
     `}
+    ${media.lessThan("medium")`
+    flex-direction: column;
+    `}
     div:nth-child(1) {
+      ${media.greaterThan("medium")`
       margin-right: 8rem;
+    `}
     }
   `}
 `;
@@ -46,7 +53,6 @@ export const Info = styled.div`
     }
   `}
 `;
-
 
 export const Name = styled.h2`
   ${({ theme }) => css`
@@ -109,16 +115,21 @@ export const ImageWrapper = styled.div`
 export const SecondaryImageContent = styled.div`
   ${({ theme }) => css`
     display: flex;
+    ${media.lessThan("medium")`
+      flex-direction: column;
+    `}
   `}
 `;
 
 export const SecondaryImage = styled.div`
   ${({ theme }) => css`
     height: 20rem;
-    width: 30rem;
+    width: 20rem;
+    margin: 1.5rem auto;
+    ${media.greaterThan("medium")`
     margin-right: 3rem;
-    ${media.lessThan("medium")`
-     height: 35rem;
+    height: 20rem;
+    width: 30rem;
     `}
     ${media.greaterThan("huge")`
     width: 70rem;

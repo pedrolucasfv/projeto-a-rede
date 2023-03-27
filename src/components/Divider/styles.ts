@@ -70,10 +70,13 @@ export const Content = styled.div`
 `;
 
 export const BorderContent = styled.div<ColorProps>`
-  ${({ theme, color }) => css`
+  ${({ color }) => css`
     margin-top: -0.5rem;
     position: relative;
     height: 30rem;
+    ${media.lessThan("medium")`
+    height: 20rem;
+    `}
     -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
     clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
     animation: fallDown 2s forwards;
@@ -115,14 +118,18 @@ const textModifiers = {
 export const Title = styled.div<TitleProps>`
   ${({ color, theme, animateLiquid, fallLiquid }) => css`
     margin-top: 5rem;
-    margin-bottom: 5rem;
+    
     font-weight: 700;
     max-width: 100rem;
     text-transform: uppercase;
+    font-size: 6rem;
+    ${media.greaterThan("medium")`
+    font-size: 12rem;
+    margin-bottom: 5rem;
+    `}
     span {
       position: absolute;
       color: #fff;
-      font-size: 12rem;
       transform: translate(-50%, -50%);
     }
     span:nth-child(1) {

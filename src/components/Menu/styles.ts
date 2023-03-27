@@ -1,12 +1,8 @@
 import styled, { css } from "styled-components";
 import media from "styled-media-query";
 
-type WrapperProps = {
-  border: boolean;
-};
-
-export const Wrapper = styled.main<WrapperProps>`
-  ${({ theme, border }) => css`
+export const Wrapper = styled.main`
+  ${({ theme }) => css`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,15 +12,10 @@ export const Wrapper = styled.main<WrapperProps>`
     position: fixed;
     width: 100%;
     z-index: 100;
-    border-bottom: none;
-    ${border &&
-    css`
-      border-bottom: none;
-    `}
     @media (min-width: 1500px) {
       padding-right: 13%;
-      padding-left: 13%; 
-  }
+      padding-left: 13%;
+    }
   `}
 `;
 
@@ -37,7 +28,11 @@ export const Logo = styled.div`
   background-repeat: no-repeat;
 `;
 
-export const MenuNav = styled.div``;
+export const MenuNav = styled.div`
+  ${media.lessThan("medium")`
+    height: 40rem; 
+  `}
+`;
 
 type MenuLinkProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary" | "all";
@@ -99,22 +94,17 @@ type MenuToggleProps = {
 export const MenuToggle = styled.nav<MenuToggleProps>`
   ${({ isOpenMenu }) => css`
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: fixed;
     z-index: 50;
     width: 42%;
     left: 0;
     top: 0;
     color: black;
-
-    bottom: 0;
     height: 100vh;
+    bottom: 0;
     transition: opacity 0.3s ease-in-out;
     opacity: ${isOpenMenu ? 1 : 0};
     pointer-events: ${isOpenMenu ? "all" : "none"};
-
     > svg {
       margin: 1.5rem;
       cursor: pointer;
@@ -124,10 +114,8 @@ export const MenuToggle = styled.nav<MenuToggleProps>`
     ${MenuNav} {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding: 1rem;
-      flex: 1;
+      align-items: center;
+      justify-content: center;
     }
     ${MenuLink} {
       color: black;
@@ -149,6 +137,3 @@ export const Sombra = styled.div`
   top: 0;
   z-index: 40;
 `;
-type AccountProps = {
-  isAccountOpen: boolean;
-};

@@ -92,9 +92,8 @@ export const ImageWrapper = styled.div`
   ${({ theme }) => css`
     height: 30rem;
     width: 100%;
-    
     ${media.lessThan("medium")`
-     height: 35rem;
+     height: 30rem;
     `}
     ${media.greaterThan("huge")`
     width: 70rem;
