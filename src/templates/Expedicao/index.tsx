@@ -15,7 +15,9 @@ export const Expedicao = () => {
     <S.Wrapper>
       <Menu />
       <Divider title={["expedição", "sertão"]} color="quaternary" />
+      <S.Animation>
       <SertaoAnimation />
+      </S.Animation>
       <SertaoInfo />
       <Footer color="quaternary" />
     </S.Wrapper>

@@ -28,8 +28,8 @@ export default {
   colors: {
     primary: '#ffcd2a',
     secondary: '#0099db',
-    tertiary: '#01a95d',
-    quaternary: '#eb268f',
+    tertiary: '#eb268f',
+    quaternary: '#01a95d',
     lightGray: '#d3d3d3',
     gray: '#b0b0b0',
     darkGray: '#7f7f7f',
