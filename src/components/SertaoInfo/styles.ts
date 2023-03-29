@@ -44,22 +44,6 @@ export const Text = styled.h4`
   `}
 `;
 
-export const TimeContent = styled.div`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.large};
-    font-weight: ${theme.font.bold};
-    margin-bottom: ${theme.spacings.large};
-    color: ${theme.colors.white};
-    ${media.lessThan("medium")`
-    text-align: center;
-    `}
-  `}
-`;
-
-type ImageProps = {
-  src: string;
-};
-
 export const ImageWrapper = styled.div`
   ${({ theme }) => css`
     height: 50rem;

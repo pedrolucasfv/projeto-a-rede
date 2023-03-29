@@ -3,16 +3,14 @@ import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Menu from "../../components/Menu";
 import * as S from "./styles";
-import { useEffect, useState } from "react";
 import VideoHome from "../../components/VideoHome";
 
 const Home = () => {
-  //const [video, setVideo] = useState([true, false, false]);
 
   return (
     <S.Wrapper>
       <S.Menu>
-        <Menu border />
+        <Menu />
       </S.Menu>
       <Banner />
       <S.VideoWrapper>

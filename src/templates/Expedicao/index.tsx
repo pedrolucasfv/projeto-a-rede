@@ -5,6 +5,7 @@ import SertaoInfo from "../../components/SertaoInfo";
 import SertaoAnimation from "../../components/SertaoAnimation";
 
 import * as S from "./styles";
+import SertaoProduct from "@/components/SertaoProduct";
 
 export type ExpedicaoProps = {
   name: string;
@@ -31,7 +32,7 @@ export const Expedicao = () => {
         <S.InfoContent>
           <S.Title>ACOMPANHE EM </S.Title>
           <S.InfoText>
-            <a>@evadionaestrada</a>
+            <a href="https://www.instagram.com/evodianaestrada/">@evadionaestrada</a>
           </S.InfoText>
         </S.InfoContent>
         <S.InfoContent>
@@ -40,6 +41,9 @@ export const Expedicao = () => {
         </S.InfoContent>
       </S.Info>
       <SertaoInfo />
+      <S.ProductContent>
+       <SertaoProduct />
+      </S.ProductContent>
       <Footer color="quaternary" />
     </S.Wrapper>
   );

@@ -57,3 +57,6 @@ export const InfoText = styled.h2`
     color: ${theme.colors.black};
   `}
 `;
+
+export const ProductContent = styled.div``;
+
