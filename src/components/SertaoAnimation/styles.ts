@@ -60,21 +60,36 @@ export const ImageCacto = styled.div<CactoProps>`
       animation: cacto-animation 6s infinite linear;
       opacity: 1;
     `}
+    ${media.lessThan("medium")`
     @keyframes cacto-animation {
       0% {
         transform: translateX(40rem);
-        ${media.greaterThan("medium")`
-        transform: translateX(70rem);
-       `}
       }
-
       100% {
         transform: translateX(-40em);
-        ${media.greaterThan("medium")`
-        transform: translateX(-72rem);
-       `}
       }
-    }
+      }
+    `}
+    ${media.greaterThan("medium")`
+    @keyframes cacto-animation {
+      0% {
+        transform: translateX(72rem);
+      }
+      100% {
+        transform: translateX(-72em);
+      }
+      }
+    `}
+    ${media.greaterThan("huge")`
+    @keyframes cacto-animation {
+      0% {
+        transform: translateX(100rem);
+      }
+      100% {
+        transform: translateX(-100em);
+      }
+      }
+    `}
   `}
 `;
 export const ImageKombi = styled.div`
