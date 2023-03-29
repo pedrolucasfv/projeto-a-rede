@@ -16,8 +16,29 @@ export const Expedicao = () => {
       <Menu />
       <Divider title={["expedição", "sertão"]} color="quaternary" />
       <S.Animation>
-      <SertaoAnimation />
+        <SertaoAnimation />
       </S.Animation>
+      <S.Text>
+        Expedição Sertão é um projeto paralelo ao projeto a rede, as doações
+        para expedição sertão são exclusivamente para essa ação e não se
+        misturam com as doações para os custos do projeto a rede.
+      </S.Text>
+      <S.Info>
+        <S.InfoContent>
+          <S.Title>DOAÇÕES PIX </S.Title>
+          <S.InfoText>EMAIL: expedicaosertao2023@gmail.com</S.InfoText>
+        </S.InfoContent>
+        <S.InfoContent>
+          <S.Title>ACOMPANHE EM </S.Title>
+          <S.InfoText>
+            <a>@evadionaestrada</a>
+          </S.InfoText>
+        </S.InfoContent>
+        <S.InfoContent>
+          <S.Title>ESTADOS PERCORRIDOS</S.Title>
+          <S.InfoText>ES - BA - PE - AL - RN - CE - MA - PI</S.InfoText>
+        </S.InfoContent>
+      </S.Info>
       <SertaoInfo />
       <Footer color="quaternary" />
     </S.Wrapper>
