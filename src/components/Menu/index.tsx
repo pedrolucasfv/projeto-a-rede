@@ -6,13 +6,11 @@ import { CloseOutline as CloseIcon } from "@styled-icons/evaicons-outline/CloseO
 
 import { useState } from "react";
 
-
-
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <S.Wrapper >
+    <S.Wrapper>
       <MediaMatch lessThan="medium" onClick={() => setIsMenuOpen(true)}>
         <MenuIcon size={18} color="white" aria-label="open menu" />
       </MediaMatch>
@@ -47,20 +45,32 @@ const Menu = () => {
           aria-label="Close Menu"
           onClick={() => setIsMenuOpen(false)}
         />
-        <S.MenuNav>
-          <S.MenuLink href="/" type="primary">
+        <S.MenuNavMobile>
+          <S.MenuLinkMobile href="/" type="primary" isOpenMenu={isMenuOpen}>
             Início
-          </S.MenuLink>
-          <S.MenuLink href="/oficinas" type="secondary">
+          </S.MenuLinkMobile>
+          <S.MenuLinkMobile
+            href="/oficinas"
+            type="secondary"
+            isOpenMenu={isMenuOpen}
+          >
             Oficinas
-          </S.MenuLink>
-          <S.MenuLink href="/acoes" type="tertiary">
+          </S.MenuLinkMobile>
+          <S.MenuLinkMobile
+            href="/acoes"
+            type="tertiary"
+            isOpenMenu={isMenuOpen}
+          >
             Ações
-          </S.MenuLink>
-          <S.MenuLink href="/expedicao-sertao" type="quaternary">
+          </S.MenuLinkMobile>
+          <S.MenuLinkMobile
+            href="/expedicao-sertao"
+            type="quaternary"
+            isOpenMenu={isMenuOpen}
+          >
             Expedição Sertão
-          </S.MenuLink>
-        </S.MenuNav>
+          </S.MenuLinkMobile>
+        </S.MenuNavMobile>
       </S.MenuToggle>
       {isMenuOpen && <S.Sombra onClick={() => setIsMenuOpen(false)} />}
     </S.Wrapper>

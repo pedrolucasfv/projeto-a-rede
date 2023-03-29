@@ -28,11 +28,7 @@ export const Logo = styled.div`
   background-repeat: no-repeat;
 `;
 
-export const MenuNav = styled.div`
-  ${media.lessThan("medium")`
-    height: 40rem; 
-  `}
-`;
+export const MenuNav = styled.div``;
 
 type MenuLinkProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary" | "all";
@@ -52,7 +48,6 @@ export const MenuLink = styled.a<MenuLinkProps>`
     &:hover {
       letter-spacing: 0.6rem;
       font-weight: 700;
-
       ${type == "primary" &&
       css`
         color: ${theme.colors.primary};
@@ -92,48 +87,79 @@ type MenuToggleProps = {
   isOpenMenu: boolean;
 };
 export const MenuToggle = styled.nav<MenuToggleProps>`
-  ${({ isOpenMenu }) => css`
-    background-color: white;
+  ${({ isOpenMenu, theme }) => css`
+    background-color: ${theme.colors.black};
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     z-index: 50;
     width: 42%;
     left: 0;
     top: 0;
     color: black;
-    height: 100vh;
     bottom: 0;
     transition: opacity 0.3s ease-in-out;
     opacity: ${isOpenMenu ? 1 : 0};
     pointer-events: ${isOpenMenu ? "all" : "none"};
     > svg {
+      color: ${theme.colors.white};
       margin: 1.5rem;
       cursor: pointer;
-      width: 2rem;
-      height: 2rem;
-    }
-    ${MenuNav} {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    ${MenuLink} {
-      color: black;
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      transform: ${isOpenMenu ? "translateY(0)" : "translateY(3rem)"};
-      transition: transform 0.3s ease-in-out;
+      width: 3rem;
+      height: 3rem;
     }
   `}
 `;
 
 export const Sombra = styled.div`
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
   left: 0;
   top: 0;
   z-index: 40;
+`;
+
+export const MenuNavMobile = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  flex: 1;
+  margin-top: 10rem;
+`;
+
+export const MenuLinkMobile = styled.a<MenuLinkProps & MenuToggleProps>`
+  ${({ theme, type, isOpenMenu }) => css`
+    margin: 0.3rem 2.8rem 0;
+    padding: 3rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 1.6rem;
+    transform: ${isOpenMenu ? 'translateY(0)' : 'translateY(3rem)'};
+    transition: transform 0.3s ease-in-out;
+    ${type == "primary" &&
+    css`
+      color: ${theme.colors.primary};
+    `}
+    ${type == "secondary" &&
+    css`
+      color: ${theme.colors.secondary};
+    `}
+      ${type == "tertiary" &&
+    css`
+      color: ${theme.colors.tertiary};
+    `}
+      ${type == "quaternary" &&
+    css`
+      color: ${theme.colors.quaternary};
+    `}
+  `}
 `;
