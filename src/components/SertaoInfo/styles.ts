@@ -16,15 +16,20 @@ export const Wrapper = styled.main`
 
     display: flex;
     flex-direction: column;
+    ${media.greaterThan("medium")`
     div:nth-child(even) {
      flex-direction: row-reverse
     }
+    `}
   `}
 `;
 
 export const Content = styled.div`
   display: flex;
   padding-bottom: 10rem;
+  ${media.lessThan("medium")`
+    flex-direction: column;
+  `}
 `;
 export const Info = styled.div`
   ${({ theme }) => css`
@@ -40,6 +45,7 @@ export const Text = styled.h4`
     color: ${theme.colors.white};
     ${media.lessThan("medium")`
     text-align: center;
+    font-size: 2rem;
     `}
   `}
 `;

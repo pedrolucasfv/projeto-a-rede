@@ -10,7 +10,7 @@ const SertaoProduct = () => (
         adiquirida das vendas vai para a execução da expedição sertão
       </S.Text>
       <S.BuyContent>
-        <S.Price>R$39,99</S.Price>
+        <S.Price>R$ 39,99</S.Price>
         <S.Button href="https://www.instagram.com/evodianaestrada/">FAÇA SEU PEDIDO</S.Button>
       </S.BuyContent>
     </S.Info>

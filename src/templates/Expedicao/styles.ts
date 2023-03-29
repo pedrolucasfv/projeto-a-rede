@@ -21,9 +21,18 @@ export const Info = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 10rem;
+  ${media.lessThan("medium")`
+     flex-direction: column;
+     text-align: center;
+    `}
 `;
 
 export const InfoContent = styled.div`
+  ${media.lessThan("medium")`
+     flex-direction: column;
+      margin-top: 2rem;
+     
+    `}
 `;
 
 export const Text = styled.h2`
@@ -59,4 +68,3 @@ export const InfoText = styled.h2`
 `;
 
 export const ProductContent = styled.div``;
-

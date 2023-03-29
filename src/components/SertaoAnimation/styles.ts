@@ -15,8 +15,11 @@ export const Wrapper = styled.main`
       translate: 5rem 5rem;
     }
     .cacto6 {
+      translate: 1rem -10rem;
+      ${media.greaterThan("medium")`
       translate: 5rem -15rem;
       height: 20rem;
+    `}
     }
   `}
 `;
@@ -32,15 +35,23 @@ export const ImageCacto = styled.div<CactoProps>`
     margin: 0 auto;
     position: absolute;
     opacity: 0;
+    ${media.lessThan("medium")`
+    height: 15rem;
+    width: 15rem;
+    `}
     //border: 1rem solid green;
     ${position == "back" &&
     css`
-      height: 15rem;
+      height: 10rem;
     `}
     ${position == "front" &&
     css`
       z-index: 20;
-      height: 30rem;
+      height: 20rem;
+      ${media.lessThan("medium")`
+      translate: 5rem 5rem;
+    `}
+
     `}
     ${animate &&
     css`
@@ -49,11 +60,17 @@ export const ImageCacto = styled.div<CactoProps>`
     `}
     @keyframes cacto-animation {
       0% {
+        transform: translateX(30rem);
+        ${media.greaterThan("medium")`
         transform: translateX(70rem);
+       `}
       }
 
       100% {
+        transform: translateX(-30em);
+        ${media.greaterThan("medium")`
         transform: translateX(-72rem);
+       `}
       }
     }
     
@@ -67,10 +84,10 @@ export const ImageKombi = styled.div`
       min-width: 40rem;
     `}
     ${media.lessThan("medium")`
-     height: 35rem;
+    width: 30rem;
     `}
     ${media.greaterThan("huge")`
-    width: 70rem;
+    width: 60rem;
     `}
     position: absolute;
     z-index: 10;
