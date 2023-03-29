@@ -39,34 +39,45 @@ export const BorderMenu = styled.div<ColorProps>`
   `}
 `;
 
-export const Content = styled.div`
-  position: absolute;
-  z-index: 30;
-  top: 0;
-  left: 1rem;
-  right: 1rem;
-  bottom: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
-  clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
-  background-color: ${theme.colors.black};
-  animation: fallDown 2s forwards;
-  @keyframes fallDown {
-    0% {
-      transform: translateY(-100%);
+type ContentProps = {
+  twoWords: boolean;
+};
+export const Content = styled.div<ContentProps>`
+  ${({ twoWords }) => css`
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
+    background-color: ${theme.colors.black};
+    animation: fallDown 2s forwards;
+    @keyframes fallDown {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
     }
-    100% {
-      transform: translateY(0%);
+    div:nth-child(1) {
+      margin-top: -5rem;
+      ${twoWords &&
+      css`
+        margin-top: -10rem;
+      `}
     }
-  }
-  div:nth-child(1) {
-    margin-top: -10rem;
-  }
-  div:nth-child(2) {
+    div:nth-child(2) {
+      ${media.greaterThan("medium")`
     margin-top: 20rem;
-  }
+    `}
+    }
+  `}
 `;
 
 export const BorderContent = styled.div<ColorProps>`
@@ -118,11 +129,10 @@ const textModifiers = {
 export const Title = styled.div<TitleProps>`
   ${({ color, theme, animateLiquid, fallLiquid }) => css`
     margin-top: 5rem;
-    
     font-weight: 700;
     max-width: 100rem;
     text-transform: uppercase;
-    font-size: 6rem;
+    font-size: 5rem;
     ${media.greaterThan("medium")`
     font-size: 12rem;
     margin-bottom: 5rem;

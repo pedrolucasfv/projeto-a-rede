@@ -6,8 +6,11 @@ export const Wrapper = styled.main`
     height: 30rem;
     width: 100%;
     overflow: hidden;
+    ${media.greaterThan("medium")`
     display: flex;
     justify-content: center;
+    `}
+    overflow: hidden;
     .cacto3 {
       translate: 5rem -5rem;
     }
@@ -51,7 +54,6 @@ export const ImageCacto = styled.div<CactoProps>`
       ${media.lessThan("medium")`
       translate: 5rem 5rem;
     `}
-
     `}
     ${animate &&
     css`
@@ -60,20 +62,19 @@ export const ImageCacto = styled.div<CactoProps>`
     `}
     @keyframes cacto-animation {
       0% {
-        transform: translateX(30rem);
+        transform: translateX(40rem);
         ${media.greaterThan("medium")`
         transform: translateX(70rem);
        `}
       }
 
       100% {
-        transform: translateX(-30em);
+        transform: translateX(-40em);
         ${media.greaterThan("medium")`
         transform: translateX(-72rem);
        `}
       }
     }
-    
   `}
 `;
 export const ImageKombi = styled.div`
@@ -103,4 +104,3 @@ export const ImageKombi = styled.div`
     }
   `}
 `;
-

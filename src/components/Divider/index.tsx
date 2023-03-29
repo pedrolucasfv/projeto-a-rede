@@ -21,7 +21,7 @@ const Divider = ({ title, color }: DividerProps) => {
     <S.Wrapper>
       <S.BorderMenu color={color} />
       <S.BorderContent color={color}>
-        <S.Content>
+        <S.Content twoWords={title.length >= 2}>
           {title.map((item, index) => (
             <S.Title
               color={color}
