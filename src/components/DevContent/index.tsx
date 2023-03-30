@@ -30,11 +30,12 @@ const DevContent = () => {
           )}
           {isOpen && (
             <S.Bonus>
-              <S.Title onClick={() => setIsOpen(false)}>CHAVE PIX</S.Title>
-              <S.Title onClick={() => setIsOpen(false)}>
-                CNPJ: 12150564812
+              <S.Title>CHAVE PIX</S.Title>
+              <S.Title>
+                CNPJ: 40291675000151 <br />
+                Missão Urbana A Rede
               </S.Title>
-              <S.Text onClick={() => setIsOpen(false)}>
+              <S.Text>
                 Você ganhou uma chave Pix, faça um depósito de 5 reais para
                 o Projeto A Rede poder ajudar mais crianças a construirem um futuro melhor!
               </S.Text>

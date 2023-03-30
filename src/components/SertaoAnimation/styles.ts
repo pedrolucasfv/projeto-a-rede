@@ -149,8 +149,8 @@ export const ImageDev = styled.div<ImageDevProps>`
     `}
     ${animate2 &&
     css`
-      animation: dev-animation-2 4s infinite linear;
-      translate: 28rem 0;
+      animation: dev-animation-2 3.5s infinite linear;
+      translate: 28rem 2rem;
     `}
 
     @keyframes dev-animation {
@@ -168,12 +168,12 @@ export const ImageDev = styled.div<ImageDevProps>`
       100% {
         transform: rotate(360deg);
       }
-    }
-  `}
+    }  `}
 `;
 
 export const DevContent = styled.div`
     z-index: 60;
+    position: absolute;
 `
 
 export const Sombra = styled.div`

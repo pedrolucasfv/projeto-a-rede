@@ -2,22 +2,24 @@ import styled, { css } from "styled-components";
 import media from "styled-media-query";
 
 type WrapperProps = {
-  isOpen: boolean
-}
+  isOpen: boolean;
+};
 
 export const Wrapper = styled.main<WrapperProps>`
-  ${({ theme, isOpen}) => css`
+  ${({ theme, isOpen }) => css`
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 4fr;
     border: 0.5rem solid #e6bc53;
+    ${media.greaterThan("medium")`
     width: 45rem;
+    `}
     height: 35rem;
     transition: height 1s;
     overflow: hidden;
-    ${isOpen && css`
-    height: 50rem;
-
+    ${isOpen &&
+    css`
+      height: 50rem;
     `}
   `}
 `;
@@ -58,17 +60,12 @@ export const MainContent = styled.div`
 
 export const ImageWrapper = styled.div`
   ${({ theme }) => css`
-  margin-left: 15rem;
+    margin-left: 15rem;
 
     margin-top: -10rem;
     height: 20rem;
     width: 20rem;
-    ${media.lessThan("medium")`
-     height: 30rem;
-    `}
-    ${media.greaterThan("huge")`
-    width: 70rem;
-    `}
+
     position: absolute;
     border: solid 0.5rem #e6bc53;
     border-radius: 1rem;
@@ -77,17 +74,28 @@ export const ImageWrapper = styled.div`
 
 export const Content = styled.div`
   margin-top: 12rem;
-  margin-left: 10rem;
+  margin-left: 9rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 export const Bonus = styled.div`
   margin-top: 2rem;
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-
+  *:nth-child(2) {
+    font-size: 2rem;
+    @media (max-width: 400px) {
+    font-size: 1.6rem;
+  }
+  }
+  *:nth-child(3) {
+    margin-top: 2rem;
+    @media (max-width: 400px) {
+      margin-top: 1rem;
+  }
+  }
 `;
 export const Title = styled.h4`
   ${({ theme }) => css`
@@ -110,25 +118,19 @@ export const Text = styled.h4`
 export const Button = styled.a`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.medium};
-  margin-top: 2rem;
-
+    margin-top: 2rem;
+    
     font-weight: ${theme.font.bold};
     padding: 2rem 3rem;
     border-radius: 1rem;
     color: ${theme.colors.white};
-    background: #1616C8;
+    background: #1616c8;
     border: solid 0.2rem #e6bc53;
     cursor: pointer;
     text-decoration: none;
     width: 25rem;
-    ${media.lessThan("medium")`
-    margin-top: 2rem;
-    font-size: ${theme.font.sizes.large};
-    padding: 2rem 3rem;
-    `}
     :hover {
       box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.4);
     }
   `}
 `;
-

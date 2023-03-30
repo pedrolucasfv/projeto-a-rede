@@ -40,8 +40,8 @@ const SertaoAnimation = () => {
         () => setStartMove([true, true, true, true, true, true]),
         6000
       );
-      setTimeout(() => setStartDev([true, false]), 7000);
-      setTimeout(() => setStartDev([true, true]), 11000);
+      setTimeout(() => setStartDev([true, false]), 30000);
+      setTimeout(() => setStartDev([true, true]), 34000);
     }
     animationLiquid();
   }, []);
