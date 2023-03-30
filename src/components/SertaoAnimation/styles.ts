@@ -119,11 +119,12 @@ export const ImageKombi = styled.div`
 `;
 
 type ImageDevProps = {
-  animate: boolean;
+  animate1: boolean;
+  animate2: boolean;
 };
 
 export const ImageDev = styled.div<ImageDevProps>`
-  ${({ theme, animate }) => css`
+  ${({ animate1, animate2 }) => css`
     height: 20rem;
     width: 20rem;
     opacity: 0;
@@ -132,21 +133,35 @@ export const ImageDev = styled.div<ImageDevProps>`
       min-width: 40rem;
     `}
     ${media.lessThan("medium")`
-    width: 30rem;
+    width: 15rem;
     `}
     ${media.greaterThan("huge")`
     width: 30rem;
     `}
     position: absolute;
     z-index: 10;
-    ${animate &&
+    ${animate1 &&
     css`
-      animation: dev-animation 1.5s infinite linear, dev-animation-2 2s forwards ;
+      animation: dev-animation 4s forwards linear;
       opacity: 1;
       cursor: pointer;
       pointer-events: visible;
     `}
+    ${animate2 &&
+    css`
+      animation: dev-animation-2 4s infinite linear;
+      translate: 28rem 0;
+    `}
+
     @keyframes dev-animation {
+      0% {
+        translate: 100rem 0;
+      }
+      100% {
+        translate: 28rem 0;
+      }
+    }
+    @keyframes dev-animation-2 {
       0% {
         transform: rotate(0);
       }
@@ -154,13 +169,19 @@ export const ImageDev = styled.div<ImageDevProps>`
         transform: rotate(360deg);
       }
     }
-    @keyframes dev-animation-2 {
-      0% {
-        translate: -100rem 0;
-      }
-      100% {
-        translate: -30rem 0;
-      }
-    }
   `}
+`;
+
+export const DevContent = styled.div`
+    z-index: 60;
+`
+
+export const Sombra = styled.div`
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  z-index: 40;
 `;
