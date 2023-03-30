@@ -5,12 +5,10 @@ export const Wrapper = styled.main`
   ${({ theme }) => css`
     height: 30rem;
     width: 100%;
-    overflow: hidden;
     ${media.greaterThan("medium")`
     display: flex;
     justify-content: center;
     `}
-    overflow: hidden;
     .cacto3 {
       translate: 5rem -5rem;
     }

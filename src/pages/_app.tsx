@@ -11,6 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
        <Head>
         <title>Projeto A Rede</title>
         <meta name="theme-color" content="#191919" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
         <link rel="shortcut icon" href="/img/logo.png" />
         <meta
           name="description"
