@@ -117,3 +117,50 @@ export const ImageKombi = styled.div`
     }
   `}
 `;
+
+type ImageDevProps = {
+  animate: boolean;
+};
+
+export const ImageDev = styled.div<ImageDevProps>`
+  ${({ theme, animate }) => css`
+    height: 20rem;
+    width: 20rem;
+    opacity: 0;
+    pointer-events: none;
+    ${media.greaterThan("medium")`
+      min-width: 40rem;
+    `}
+    ${media.lessThan("medium")`
+    width: 30rem;
+    `}
+    ${media.greaterThan("huge")`
+    width: 30rem;
+    `}
+    position: absolute;
+    z-index: 10;
+    ${animate &&
+    css`
+      animation: dev-animation 1.5s infinite linear, dev-animation-2 2s forwards ;
+      opacity: 1;
+      cursor: pointer;
+      pointer-events: visible;
+    `}
+    @keyframes dev-animation {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes dev-animation-2 {
+      0% {
+        translate: -100rem 0;
+      }
+      100% {
+        translate: -30rem 0;
+      }
+    }
+  `}
+`;

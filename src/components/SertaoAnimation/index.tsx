@@ -3,6 +3,9 @@ import * as S from "./styles";
 import { useState, useEffect } from "react";
 const SertaoAnimation = () => {
   const [startMove, setStartMove] = useState([false,false,false,false, false, false]);
+  const [startDev, setStartDev] = useState(false)
+  const [isOpenDev, setIsOpenDev] = useState(false)
+
   useEffect(() => {
     async function animationLiquid() {
       setTimeout(() => setStartMove([true,false,false,false, false, false]), 1000);
@@ -11,9 +14,11 @@ const SertaoAnimation = () => {
       setTimeout(() => setStartMove([true,true,true,true, false, false]), 4000);
       setTimeout(() => setStartMove([true,true,true,true, true, false]), 5000);
       setTimeout(() => setStartMove([true,true,true,true, true, true]), 6000);
+      setTimeout(() => setStartDev(true), 60000);
     }
     animationLiquid();
   }, []);
+
   return (
     <S.Wrapper>
       <S.ImageKombi>
@@ -33,7 +38,7 @@ const SertaoAnimation = () => {
           objectFit="contain"
         />
       </S.ImageCacto>
-      <S.ImageCacto position="front" animate={startMove[1]}>
+      <S.ImageCacto position="front" animate={startMove[1]} className="cacto5">
         <Image
           src="/img/cacto-2.png"
           alt="Logo da RF reboque"
@@ -73,6 +78,14 @@ const SertaoAnimation = () => {
           objectFit="cover"
         />
       </S.ImageCacto>
+      <S.ImageDev animate={startDev} onClick={() => setIsOpenDev(true)}>
+        <Image
+          src="/img/logo-dev.png"
+          alt="Logo da RF reboque"
+          layout="fill"
+          objectFit="contain"
+        />
+      </S.ImageDev>
     </S.Wrapper>
   );
 };
