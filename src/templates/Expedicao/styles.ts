@@ -68,3 +68,9 @@ export const InfoText = styled.h2`
 `;
 
 export const ProductContent = styled.div``;
+
+export const Container = styled.div`
+   ${media.greaterThan("huge")`
+      padding: 0 29rem;
+    `}
+`;

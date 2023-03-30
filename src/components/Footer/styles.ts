@@ -30,6 +30,7 @@ export const Wrapper = styled.main<ColorProps>`
     ${media.lessThan("medium")`
     display: flex;
     flex-direction: column;
+    align-items: center;
     `}
     border-top: 0.6rem solid ${theme.colors.secondary};
     padding: 2rem 4rem;
@@ -140,9 +141,15 @@ export const ContentInfo = styled.div`
 export const Copyright = styled.h2`
   color: #a2a2a2;
   font-size: 1.7rem;
+  ${media.lessThan("medium")`
+    font-size: 1.4rem;
+    `}
 
   span {
     font-size: 1.4rem;
+    ${media.lessThan("medium")`
+    font-size: 1.1rem;
+    `}
   }
 `;
 

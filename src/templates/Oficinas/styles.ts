@@ -36,6 +36,7 @@ export const OficinaCardContent = styled.div`
   background-color: gray;
   display: flex;
   margin: 7rem auto;
+  padding: 0 2rem;
   overflow-x: scroll;
   ${media.greaterThan("medium")`
    width: 85%;

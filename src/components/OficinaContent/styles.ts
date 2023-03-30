@@ -7,22 +7,24 @@ type InvertProps = {
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
-    padding: 5rem 5rem;
     background: ${theme.colors.black};
-    border: 0.7rem solid ${theme.colors.secondary};
-    border-radius: 1rem;
-    width: 85%;
     margin: 7rem auto;
-    ${media.lessThan("medium")`
+    border-top: 0.7rem solid ${theme.colors.secondary};
+    border-bottom: 0.7rem solid ${theme.colors.secondary};
     width: 100%;
-
     padding: 1rem 5rem;
+    ${media.greaterThan("medium")`
+    border: 0.7rem solid ${theme.colors.secondary};
+    width: 85%;
+    border-radius: 1rem;
+    padding: 5rem 5rem;
     `}
   `}
 `;
 
 export const Content = styled.div<InvertProps>`
   ${({ invert }) => css`
+  
     display: flex;
     padding-bottom: 10rem;
     ${invert &&
@@ -107,7 +109,7 @@ export const ImageWrapper = styled.div`
     width: 70rem;
     `}
     position: relative;
-    border: solid 0.5rem ${theme.colors.secondary};
+    border: solid 0.5rem ${theme.colors.white};
     border-radius: 1rem;
   `}
 `;
@@ -135,7 +137,7 @@ export const SecondaryImage = styled.div`
     width: 70rem;
     `}
     position: relative;
-    border: solid 0.5rem ${theme.colors.secondary};
+    border: solid 0.5rem ${theme.colors.white};
     border-radius: 1rem;
   `}
 `;

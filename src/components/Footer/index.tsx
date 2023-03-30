@@ -38,9 +38,11 @@ const Footer = ({ color = "primary" }: FooterProps) => (
       </S.ContentInfo>
       <S.ContentInfo>
         <S.Heading color="quaternary">Doações</S.Heading>
-        <S.Text>PIX: 812481274</S.Text>
-        <S.Text>BANCO: Caixa Econômica Federal</S.Text>
-        <S.Text>NÚMERO: 16412551 AGÊNCIA: 0007</S.Text>
+        <S.Text>PIX - CPNJ: 40 291 675 0001 51</S.Text>
+        <S.Text>BANCO: SICREDI</S.Text>
+        <S.Text>NÚMERO: 50687-6 AGÊNCIA: 0719</S.Text>
+        <S.Text>Missão Urbana A Rede</S.Text>
+
       </S.ContentInfo>
     </S.Info>
     <S.ContentImage>

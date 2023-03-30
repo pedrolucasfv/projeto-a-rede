@@ -19,6 +19,7 @@ export const Expedicao = () => {
       <S.Animation>
         <SertaoAnimation />
       </S.Animation>
+      <S.Container>
       <S.Text>
         Expedição Sertão é um projeto paralelo ao projeto a rede, as doações
         para expedição sertão são exclusivamente para essa ação e não se
@@ -44,6 +45,7 @@ export const Expedicao = () => {
       <S.ProductContent>
        <SertaoProduct />
       </S.ProductContent>
+      </S.Container>
       <Footer color="quaternary" />
     </S.Wrapper>
   );
