@@ -72,7 +72,7 @@ export const Name = styled.h2`
 `;
 export const Description = styled.h4`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.small};
+    font-size: 1.2rem;
     font-weight: ${theme.font.normal};
     margin-bottom: ${theme.spacings.large};
     color: ${theme.colors.darkGray};
