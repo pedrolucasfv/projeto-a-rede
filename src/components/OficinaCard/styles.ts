@@ -7,7 +7,7 @@ type InvertProps = {
 
 export const Wrapper = styled.section`
   ${({ theme}) => css`
-    padding: 5rem 5rem;
+    padding: 5rem 3rem;
     background-color: ${theme.colors.black};
     border: 0.7rem solid ${theme.colors.secondary};
     border-radius: 1rem;
@@ -63,7 +63,7 @@ export const Name = styled.h2`
   ${({ theme }) => css`
     font-size: 3.5rem;
     color: ${theme.colors.white};
-    margin: ${theme.spacings.xsmall} 0;
+    margin: ${theme.spacings.xxsmall} 0;
     ${media.lessThan("medium")`
     font-size: 4rem;
     text-align: center;
@@ -84,19 +84,16 @@ export const Description = styled.h4`
 
 
 
-type ImageProps = {
-  src: string;
-};
 
 export const ImageWrapper = styled.div`
   ${({ theme }) => css`
-    height: 30rem;
+    height: 25rem;
     width: 100%;
     ${media.lessThan("medium")`
      height: 30rem;
     `}
     ${media.greaterThan("huge")`
-    width: 70rem;
+    width: 40rem;
     `}
     position: relative;
     border: solid 0.5rem ${theme.colors.secondary};

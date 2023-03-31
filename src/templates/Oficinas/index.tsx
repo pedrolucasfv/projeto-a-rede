@@ -28,7 +28,7 @@ const Oficinas = () => {
       <OficinaContent
         name="Aulas de música"
         description="Essa é uma oficina para ensinar aulas de música para as crianças de 07 a 15 anos. A música é importante na formação de uma criança para desenvolver sua criatividade e coordenação motora. Além disso, a música promove a cultura, ajuda a descobrir um pontecial talento e cria momentos de descontração e alegria."
-        image="/img/aula-de-canto-2.jpeg"
+        image="/img/aula-de-musica-1.jpeg"
         time="Terça-feira: 18:00 até 19:00"
         age="De 07 a 15 anos"
         invert
@@ -47,7 +47,7 @@ const Oficinas = () => {
         />
         <OficinaCard
           name="Aulas de Informática"
-          description="Nessa oficina, as crianças aprendem sobre o uso do computador, seus componentes, sistemas operacionais, programas de software e a navegação na internet. Além disso, também podem aprender sobre programação básica e desenvolvimento de jogos simples. O objetivo dessas oficinas é fornecer às crianças um entendimento básico e prático da tecnologia, bem como incentivá-las a serem mais familiarizadas com o mundo digital."
+          description="Nessa oficina, as crianças aprendem sobre o uso do computador, programas de software e a navegação na internet. O objetivo dessas oficinas é fornecer às crianças um entendimento básico e prático da tecnologia, bem como incentivá-las a serem mais familiarizadas com o mundo digital."
           image="/img/aula-de-informatica.jpeg"
         />
          <OficinaCard
