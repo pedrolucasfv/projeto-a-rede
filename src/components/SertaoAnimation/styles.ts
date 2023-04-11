@@ -27,10 +27,10 @@ export const Wrapper = styled.main`
 
 type CactoProps = {
   position: "front" | "back";
-  animate: boolean;
+  animateDelay: number;
 };
 export const ImageCacto = styled.div<CactoProps>`
-  ${({ theme, position, animate }) => css`
+  ${({ position, animateDelay }) => css`
     height: 20rem;
     width: 20rem;
     margin: 0 auto;
@@ -53,18 +53,21 @@ export const ImageCacto = styled.div<CactoProps>`
       translate: 5rem 5rem;
     `}
     `}
-    ${animate &&
-    css`
-      animation: cacto-animation 6s infinite linear;
-      opacity: 1;
-    `}
+
+
+    animation: cacto-animation 6s infinite linear;
+    animation-delay: ${animateDelay}s;
     ${media.lessThan("medium")`
     @keyframes cacto-animation {
       0% {
         transform: translateX(40rem);
+        opacity: 1;
+
       }
       100% {
         transform: translateX(-40em);
+       opacity: 1;
+
       }
       }
     `}
@@ -72,9 +75,11 @@ export const ImageCacto = styled.div<CactoProps>`
     @keyframes cacto-animation {
       0% {
         transform: translateX(72rem);
+        opacity: 1;
       }
       100% {
         transform: translateX(-72em);
+        opacity: 1;
       }
       }
     `}
@@ -82,9 +87,11 @@ export const ImageCacto = styled.div<CactoProps>`
     @keyframes cacto-animation {
       0% {
         transform: translateX(100rem);
+        opacity: 1;
       }
       100% {
         transform: translateX(-100em);
+        opacity: 1;
       }
       }
     `}
@@ -118,63 +125,56 @@ export const ImageKombi = styled.div`
   `}
 `;
 
-type ImageDevProps = {
-  animate1: boolean;
-  animate2: boolean;
-};
-
-export const ImageDev = styled.div<ImageDevProps>`
-  ${({ animate1, animate2 }) => css`
-    height: 20rem;
-    width: 20rem;
-    opacity: 0;
-    pointer-events: none;
-    ${media.greaterThan("medium")`
+export const ImageDev = styled.div`
+  height: 20rem;
+  width: 20rem;
+  opacity: 0;
+  pointer-events: none;
+  ${media.greaterThan("medium")`
       min-width: 40rem;
     `}
-    ${media.lessThan("medium")`
+  ${media.lessThan("medium")`
     width: 15rem;
     `}
     ${media.greaterThan("huge")`
     width: 30rem;
     `}
     position: absolute;
-    z-index: 10;
-    ${animate1 &&
-    css`
-      animation: dev-animation 4s forwards linear;
+  z-index: 10;
+
+  animation: dev-animation 4s forwards linear,
+    dev-animation-2 3.5s infinite linear;
+  animation-delay: 30s, 34s;
+
+
+  @keyframes dev-animation {
+    0% {
+      translate: 100rem 0;
       opacity: 1;
       cursor: pointer;
       pointer-events: visible;
-    `}
-    ${animate2 &&
-    css`
-      animation: dev-animation-2 3.5s infinite linear;
-      translate: 28rem 2rem;
-    `}
-
-    @keyframes dev-animation {
-      0% {
-        translate: 100rem 0;
-      }
-      100% {
-        translate: 28rem 0;
-      }
     }
-    @keyframes dev-animation-2 {
-      0% {
-        transform: rotate(0);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }  `}
+    100% {
+      translate: 28rem 0;
+      opacity: 1;
+      cursor: pointer;
+      pointer-events: visible;
+    }
+  }
+  @keyframes dev-animation-2 {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 `;
 
 export const DevContent = styled.div`
-    z-index: 60;
-    position: absolute;
-`
+  z-index: 60;
+  position: absolute;
+`;
 
 export const Sombra = styled.div`
   position: fixed;

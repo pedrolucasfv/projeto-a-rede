@@ -1,50 +1,10 @@
 import Image from "next/image";
-import * as S from "./styles";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import DevContent from "../DevContent";
+import * as S from "./styles";
 const SertaoAnimation = () => {
-  const [startMove, setStartMove] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
-  const [startDev, setStartDev] = useState([false, false]);
-  const [isOpenDev, setIsOpenDev] = useState(false);
 
-  useEffect(() => {
-    async function animationLiquid() {
-      setTimeout(
-        () => setStartMove([true, false, false, false, false, false]),
-        1000
-      );
-      setTimeout(
-        () => setStartMove([true, true, false, false, false, false]),
-        2000
-      );
-      setTimeout(
-        () => setStartMove([true, true, true, false, false, false]),
-        3000
-      );
-      setTimeout(
-        () => setStartMove([true, true, true, true, false, false]),
-        4000
-      );
-      setTimeout(
-        () => setStartMove([true, true, true, true, true, false]),
-        5000
-      );
-      setTimeout(
-        () => setStartMove([true, true, true, true, true, true]),
-        6000
-      );
-      setTimeout(() => setStartDev([true, false]), 30000);
-      setTimeout(() => setStartDev([true, true]), 34000);
-    }
-    animationLiquid();
-  }, []);
+  const [isOpenDev, setIsOpenDev] = useState(false);
 
   return (
     <S.Wrapper>
@@ -57,7 +17,7 @@ const SertaoAnimation = () => {
         />
       </S.ImageKombi>
 
-      <S.ImageCacto position="back" animate={startMove[0]}>
+      <S.ImageCacto position="back" animateDelay={0}>
         <Image
           src="/img/cacto-1.png"
           alt="Logo da RF reboque"
@@ -65,7 +25,7 @@ const SertaoAnimation = () => {
           objectFit="contain"
         />
       </S.ImageCacto>
-      <S.ImageCacto position="front" animate={startMove[1]} className="cacto5">
+      <S.ImageCacto position="front" animateDelay={1} className="cacto5">
         <Image
           src="/img/cacto-2.png"
           alt="Logo da RF reboque"
@@ -73,7 +33,7 @@ const SertaoAnimation = () => {
           objectFit="contain"
         />
       </S.ImageCacto>
-      <S.ImageCacto position="back" animate={startMove[2]} className="cacto3">
+      <S.ImageCacto position="back" animateDelay={2} className="cacto3">
         <Image
           src="/img/cacto-3.png"
           alt="Logo da RF reboque"
@@ -81,7 +41,7 @@ const SertaoAnimation = () => {
           objectFit="contain"
         />
       </S.ImageCacto>
-      <S.ImageCacto position="back" animate={startMove[3]}>
+      <S.ImageCacto position="back" animateDelay={3}>
         <Image
           src="/img/cacto-6.png"
           alt="Logo da RF reboque"
@@ -89,7 +49,7 @@ const SertaoAnimation = () => {
           objectFit="contain"
         />
       </S.ImageCacto>
-      <S.ImageCacto position="front" animate={startMove[4]} className="cacto5">
+      <S.ImageCacto position="front" animateDelay={4} className="cacto5">
         <Image
           src="/img/cacto-7.png"
           alt="Logo da RF reboque"
@@ -97,7 +57,7 @@ const SertaoAnimation = () => {
           objectFit="contain"
         />
       </S.ImageCacto>
-      <S.ImageCacto position="back" animate={startMove[5]} className="cacto6">
+      <S.ImageCacto position="back" animateDelay={5} className="cacto6">
         <Image
           src="/img/cacto-8.png"
           alt="Logo da RF reboque"
@@ -106,8 +66,6 @@ const SertaoAnimation = () => {
         />
       </S.ImageCacto>
       <S.ImageDev
-        animate1={startDev[0]}
-        animate2={startDev[1]}
         onClick={() => setIsOpenDev(true)}
       >
         <Image
@@ -117,11 +75,12 @@ const SertaoAnimation = () => {
           objectFit="contain"
         />
       </S.ImageDev>
-      {isOpenDev && (<>
-        <S.DevContent>
-          <DevContent />
-        </S.DevContent>
-        <S.Sombra onClick={() => setIsOpenDev(false)}/>
+      {isOpenDev && (
+        <>
+          <S.DevContent>
+            <DevContent />
+          </S.DevContent>
+          <S.Sombra onClick={() => setIsOpenDev(false)} />
         </>
       )}
     </S.Wrapper>
