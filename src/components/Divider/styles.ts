@@ -1,12 +1,6 @@
-import theme from "../../styles/theme";
 import styled, { css } from "styled-components";
 import media from "styled-media-query";
-
-type TitleProps = {
-  color: "primary" | "secondary" | "tertiary" | "quaternary";
-  fallLiquid: boolean;
-  animateLiquid: boolean;
-};
+import theme from "../../styles/theme";
 
 type ColorProps = {
   color: "primary" | "secondary" | "tertiary" | "quaternary";
@@ -126,8 +120,8 @@ const textModifiers = {
   `,
 };
 
-export const Title = styled.div<TitleProps>`
-  ${({ color, theme, animateLiquid, fallLiquid }) => css`
+export const Title = styled.div<ColorProps>`
+  ${({ color, theme}) => css`
     margin-top: 5rem;
     font-weight: 700;
     max-width: 100rem;
@@ -160,14 +154,9 @@ export const Title = styled.div<TitleProps>`
         100% 60%,
         0% 60%
       );
-      ${fallLiquid &&
-      css`
-        animation: fallLiquids 1.2s ease-in-out forwards;
-      `}
-      ${animateLiquid &&
-      css`
-        animation: animation 2.5s ease-in-out infinite;
-      `}
+      animation: fallLiquids 1.2s ease-in-out forwards,
+        liquidAnimation 2.5s ease-in-out infinite;
+      animation-delay: 1s, 2.1s
     }
     @keyframes fallLiquids {
       0% {
@@ -197,7 +186,7 @@ export const Title = styled.div<TitleProps>`
         );
       }
     }
-    @keyframes animation {
+    @keyframes liquidAnimation {
       0%,
       100% {
         clip-path: polygon(

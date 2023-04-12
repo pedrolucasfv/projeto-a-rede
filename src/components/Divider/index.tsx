@@ -1,5 +1,4 @@
 import * as S from "./styles";
-import { useState, useEffect } from "react";
 
 export type DividerProps = {
   title: string[];
@@ -7,16 +6,7 @@ export type DividerProps = {
 };
 
 const Divider = ({ title, color }: DividerProps) => {
-  const [fallLiquid, setFallLiquid] = useState(false);
-  const [animateLiquid, setAnimateLiquid] = useState(false);
 
-  useEffect(() => {
-    async function animationLiquid() {
-      setTimeout(() => setFallLiquid(true), 1000);
-      setTimeout(() => setAnimateLiquid(true), 2100);
-    }
-    animationLiquid();
-  }, []);
   return (
     <S.Wrapper>
       <S.BorderMenu color={color} />
@@ -25,8 +15,6 @@ const Divider = ({ title, color }: DividerProps) => {
           {title.map((item, index) => (
             <S.Title
               color={color}
-              fallLiquid={fallLiquid}
-              animateLiquid={animateLiquid}
               key={index}
             >
               <span>{item}</span>
