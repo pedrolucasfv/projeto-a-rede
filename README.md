@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
+  <p align="center">
+    <video width= "215px" height="408px" src="/video/projeto-a-rede.mp4">
+  </p>
+
+
+
 ## Getting Started
 
 First, run the development server:
