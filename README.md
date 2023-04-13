@@ -1,9 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 
-  <p align="center">
-    <video width= "215px" height="408px" src="/video/projeto-a-rede.mp4">
-  </p>
+ [![VIDEO DO PORTFOLIO DE PEDRO LUCAS](https://img.youtube.com/vi/YzqTGdcpWNk/0.jpg)](https://www.youtube.com/watch?v=M480tPVb8s0)
 
 
 
