@@ -16,7 +16,7 @@ const EnchenteBanner = () => {
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText('Texto copiado!');
+      await navigator.clipboard.writeText('40291675000151');
       console.log('Texto copiado para a área de transferência');
     } catch (err) {
       console.log('Falha ao copiar o texto', err);

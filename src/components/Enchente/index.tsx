@@ -23,7 +23,6 @@ const Enchente = ({
   secondaryImages,
 }: OficinaContentProps) => {
   const [videoIndex, setVideoIndex] = useState(0);
-  console.log('image', image[videoIndex]);
   return (
     <S.Wrapper>
       <S.Content invert={invert}>
