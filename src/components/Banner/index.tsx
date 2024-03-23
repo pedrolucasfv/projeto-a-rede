@@ -1,6 +1,6 @@
-import * as S from "./styles";
-import { useState, useEffect } from "react";
-import Image from "next/image";
+import * as S from './styles';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const Banner = () => {
   const [fallLiquid, setFallLiquid] = useState(false);
@@ -42,14 +42,12 @@ const Banner = () => {
       </S.RightContent>
       <S.LeftContent>
         <S.Text>
-          Junte-se a nós para fazer a diferença na vida de quem mais precisa!
-          Sua doação pode transformar o futuro de muitas pessoas e comunidades
-          inteiras. Não perca a oportunidade de fazer o bem e ser parte dessa
-          corrente do bem. Cada centavo conta e cada gesto de solidariedade faz
-          a diferença. Vamos juntos mudar o mundo, uma doação de cada vez!
+          Projeto a rede está precisando da sua ajuda! Bom Jesus do Itabapoana e
+          Bom jesus do Norte sofreram com enormes quantidades de chuva e muitas
+          pessoas perderam tudo, há pessoas que estão precisando de água, comida
+          e produtos básicos para sobrevivencia. <a href='/chuvas'>Clique aqui para mais informações</a>
         </S.Text>
       </S.LeftContent>
-     
     </S.Wrapper>
   );
 };

@@ -35,8 +35,8 @@ const Menu = () => {
       </MediaMatch>
 
       <S.MenuGroup>
-        <S.MenuLink href="/" type="all">
-          Seja Voluntário
+        <S.MenuLink href="/enchentes" type="all">
+          Enchentes
         </S.MenuLink>
       </S.MenuGroup>
 

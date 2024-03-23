@@ -42,7 +42,6 @@ const Footer = ({ color = "primary" }: FooterProps) => (
         <S.Text>BANCO: SICREDI</S.Text>
         <S.Text>NÚMERO: 50687-6 AGÊNCIA: 0719</S.Text>
         <S.Text>Missão Urbana A Rede</S.Text>
-
       </S.ContentInfo>
     </S.Info>
     <S.ContentImage>
