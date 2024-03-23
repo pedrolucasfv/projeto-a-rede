@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components";
-import media from "styled-media-query";
+import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 export const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
-  ${media.greaterThan("medium")`
+  ${media.greaterThan('medium')`
   display: grid;
   grid-template-columns: 2fr 1.5fr;  
   `}
@@ -17,7 +17,7 @@ export const LeftContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     margin-top: 5rem;
     padding-right: 2rem;
     padding-left: 2rem;
@@ -39,13 +39,13 @@ export const ImageWrapper = styled.div`
   width: 25rem;
   height: 40rem;
   margin-top: -10rem;
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
       width: 40rem;
       height: 70rem;
-    `}
+  `}
   @media (max-width: 400px) {
-    width: 20rem;
-    height: 20rem;
+    width: 38rem;
+    height: 60rem;
     margin-top: -5rem;
   }
   position: relative;
@@ -55,14 +55,14 @@ export const TextContent = styled.div`
   div:nth-child(1) {
     margin-top: 1rem;
     font-size: 10rem;
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
     font-size: 5rem;
     `}
   }
 
   div:nth-child(2) {
     font-size: 3rem;
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
     margin-top: -3rem;
     font-size: 1.5rem;
     `}
@@ -113,7 +113,7 @@ export const BorderContent = styled.div`
     margin-top: -0.5rem;
     position: relative;
     height: 80vh;
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
     height: 40vh;
     `}
     -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
@@ -132,12 +132,11 @@ export const BorderContent = styled.div`
   `}
 `;
 
-
 export const Info = styled.div`
   ${({ theme }) => css`
     display: flex;
     justify-content: center;
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
     align-items: center;
    `}
     flex-direction: column;
@@ -153,7 +152,7 @@ export const Name = styled.h2`
     font-size: 5.5rem;
     color: ${theme.colors.secondary};
     margin: ${theme.spacings.xsmall} 0;
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
     font-size: 4rem;
     text-align: center;
     `}
@@ -165,7 +164,7 @@ export const Description = styled.h4`
     font-weight: ${theme.font.normal};
     margin-bottom: ${theme.spacings.large};
     color: ${theme.colors.darkGray};
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
     text-align: center;
     `}
   `}
@@ -177,7 +176,7 @@ export const TimeContent = styled.div`
     font-weight: ${theme.font.bold};
     margin-bottom: ${theme.spacings.large};
     color: ${theme.colors.white};
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
     text-align: center;
     `}
   `}
@@ -286,7 +285,6 @@ export const Title = styled.div<TitleProps>`
     }
   `}
 `;
-
 
 export const ButtonWrapper = styled.div`
   display: flex;
