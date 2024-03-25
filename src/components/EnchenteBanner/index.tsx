@@ -1,6 +1,7 @@
 import * as S from './styles';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import MediaMatch from '../MediaMatch';
 
 const EnchenteBanner = () => {
   const [fallLiquid, setFallLiquid] = useState(false);
@@ -58,6 +59,18 @@ const EnchenteBanner = () => {
             >
               Pressione aqui para copiar chave PIX
             </S.Button>
+
+            <MediaMatch greaterThan="medium">
+              <S.ImageWrapperPix>
+                <Image
+                  src="/img/qrcode-pix.png"
+                  alt="Logo da RF reboque"
+                  layout="fill"
+                  objectFit="cover"
+                  style={{ borderRadius: '20px' }}
+                />
+              </S.ImageWrapperPix>
+            </MediaMatch>
           </S.ButtonWrapper>
         </S.Text>
       </S.LeftContent>

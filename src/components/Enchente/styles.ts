@@ -12,7 +12,7 @@ export const Wrapper = styled.main`
     border-top: 0.7rem solid ${theme.colors.secondary};
     border-bottom: 0.7rem solid ${theme.colors.secondary};
     width: 100%;
-    padding: 1rem 5rem;
+    padding: 1rem 3rem;
     ${media.greaterThan('medium')`
     border: 0.7rem solid ${theme.colors.secondary};
     width: 85%;

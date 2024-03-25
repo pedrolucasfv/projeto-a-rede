@@ -1,11 +1,11 @@
-import * as S from "./styles";
-import { FacebookSquare as FacebookIcon } from "@styled-icons/boxicons-logos/FacebookSquare";
-import { Instagram as InstagramIcon } from "@styled-icons/boxicons-logos/Instagram";
+import * as S from './styles';
+import { FacebookSquare as FacebookIcon } from '@styled-icons/boxicons-logos/FacebookSquare';
+import { Instagram as InstagramIcon } from '@styled-icons/boxicons-logos/Instagram';
 type FooterProps = {
-  color?: "primary" | "secondary" | "tertiary" | "quaternary";
+  color?: 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 };
 
-const Footer = ({ color = "primary" }: FooterProps) => (
+const Footer = ({ color = 'primary' }: FooterProps) => (
   <S.Wrapper color={color}>
     <S.Info>
       <S.ContentInfo>
@@ -27,13 +27,21 @@ const Footer = ({ color = "primary" }: FooterProps) => (
         <S.Heading color="tertiary">Redes Sociais</S.Heading>
         <S.Subtitle className="primeiroItem">Projeto A Rede</S.Subtitle>
         <S.SocialNetwork>
-          <FacebookIcon size={50} />
-          <InstagramIcon size={50} />
+          <a
+            href="https://www.facebook.com/basemissionariaurbana"
+            target="_blank"
+          >
+            <FacebookIcon size={50} />
+          </a>
+          <a href="https://www.instagram.com/projetoarede/" target="_blank">
+            <InstagramIcon size={50} />
+          </a>
         </S.SocialNetwork>
         <S.Subtitle>Expedição Sertão</S.Subtitle>
         <S.SocialNetwork>
-          <FacebookIcon size={50} />
-          <InstagramIcon size={50} />
+          <a href="https://www.instagram.com/evodianaestrada/" target="_blank">
+            <InstagramIcon size={50} />
+          </a>
         </S.SocialNetwork>
       </S.ContentInfo>
       <S.ContentInfo>

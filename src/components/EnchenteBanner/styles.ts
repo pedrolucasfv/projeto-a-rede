@@ -36,9 +36,26 @@ export const Text = styled.h4`
 `;
 
 export const ImageWrapper = styled.div`
+  width: 40rem;
+  height: 60rem;
+  ${media.lessThan('medium')`
+      width: 40rem;
+      height: 70rem;
+  `}
+  @media (max-width: 400px) {
+    width: 38rem;
+    height: 60rem;
+    margin-top: -5rem;
+  }
+  position: relative;
+`;
+
+export const ImageWrapperPix = styled.div`
   width: 25rem;
-  height: 40rem;
-  margin-top: -10rem;
+  height: 25rem;
+  ${media.greaterThan('medium')`
+      margin-left: 5rem;
+  `}
   ${media.lessThan('medium')`
       width: 40rem;
       height: 70rem;
@@ -291,6 +308,7 @@ export const ButtonWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 4rem;
+  
 `;
 
 export const Button = styled.div`

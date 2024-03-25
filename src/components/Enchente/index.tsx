@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import * as S from './styles';
 import { useState } from 'react';
+import MediaMatch from '../MediaMatch';
 
 export type OficinaContentProps = {
   name: string;
@@ -35,17 +36,19 @@ const Enchente = ({
             {age}
           </S.TimeContent>
         </S.Info>
-        <S.ButtonWrapper>
-          <S.Button
-            onClick={() => {
-              videoIndex !== 0
-                ? setVideoIndex(videoIndex - 1)
-                : setVideoIndex(0);
-            }}
-          >
-            ◀ Video Anterior
-          </S.Button>
-        </S.ButtonWrapper>
+        <MediaMatch lessThan="medium">
+          <S.ButtonWrapper>
+            <S.Button
+              onClick={() => {
+                videoIndex !== 0
+                  ? setVideoIndex(videoIndex - 1)
+                  : setVideoIndex(0);
+              }}
+            >
+              ◀ Video Anterior
+            </S.Button>
+          </S.ButtonWrapper>
+        </MediaMatch>
         <S.ImageWrapper>
           <video
             id="video1"
@@ -54,18 +57,33 @@ const Enchente = ({
             height={'100%'}
             width={'100%'}
           />
+          <MediaMatch greaterThan="medium">
+            <S.ButtonWrapper>
+              <S.Button
+                onClick={() => {
+                  videoIndex !== 6
+                    ? setVideoIndex(videoIndex + 1)
+                    : setVideoIndex(0);
+                }}
+              >
+                Proximo Video
+              </S.Button>
+            </S.ButtonWrapper>
+          </MediaMatch>
         </S.ImageWrapper>
-        <S.ButtonWrapper>
-          <S.Button
-            onClick={() => {
-              videoIndex !== 6
-                ? setVideoIndex(videoIndex + 1)
-                : setVideoIndex(6);
-            }}
-          >
-            Próximo Vídeo ▶
-          </S.Button>
-        </S.ButtonWrapper>
+        <MediaMatch lessThan="medium">
+          <S.ButtonWrapper>
+            <S.Button
+              onClick={() => {
+                videoIndex !== 6
+                  ? setVideoIndex(videoIndex + 1)
+                  : setVideoIndex(6);
+              }}
+            >
+              Próximo Vídeo ▶
+            </S.Button>
+          </S.ButtonWrapper>
+        </MediaMatch>
       </S.Content>
       {secondaryImages && (
         <S.SecondaryImageContent>

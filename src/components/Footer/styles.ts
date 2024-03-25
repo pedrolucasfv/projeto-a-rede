@@ -1,6 +1,6 @@
-import theme from "../../styles/theme";
-import styled, { css } from "styled-components";
-import media from "styled-media-query";
+import theme from '../../styles/theme';
+import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 const colorModifiers = {
   primary: () => css`
@@ -22,12 +22,12 @@ export const Wrapper = styled.main<ColorProps>`
     background-color: ${theme.colors.black};
     color: ${theme.colors.white};
 
-    ${media.greaterThan("medium")`
+    ${media.greaterThan('medium')`
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 20% 60% 20%;
     `}
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,8 +37,6 @@ export const Wrapper = styled.main<ColorProps>`
     ${color && colorModifiers[color]()};
   `}
 `;
-
-
 
 export const Text = styled.h4`
   display: flex;
@@ -69,6 +67,9 @@ export const SocialNetwork = styled.div`
   display: flex;
   justify-content: space-around;
   margin-bottom: 1.5rem;
+  a {
+    color: white;
+  }
 `;
 type ImageProps = {
   src: string;
@@ -76,7 +77,7 @@ type ImageProps = {
 
 export const Image = styled.div<ImageProps>`
   ${({ src }) => css`
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
     height: 35rem;
     `}
     height: 40rem;
@@ -96,7 +97,7 @@ export const ContentImage = styled.div`
   align-items: center;
 `;
 type ColorProps = {
-  color: "primary" | "secondary" | "tertiary" | "quaternary";
+  color: 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 };
 
 export const Heading = styled.h2<ColorProps>`
@@ -108,7 +109,7 @@ export const Heading = styled.h2<ColorProps>`
       position: absolute;
       left: 0;
       bottom: -0.5rem;
-      content: "";
+      content: '';
       width: 5rem;
       border-bottom: 0.5rem solid;
       ${color && colorModifiers[color]()}
@@ -119,13 +120,13 @@ export const Heading = styled.h2<ColorProps>`
 export const Info = styled.div`
   grid-row: 2;
   display: flex;
-  ${media.greaterThan("huge")`
+  ${media.greaterThan('huge')`
     padding: 0 5rem;
   `}
   justify-content: flex-start;
   align-items: flex-start;
 
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     flex-direction: column;
     padding: 0;
     `}
@@ -141,13 +142,13 @@ export const ContentInfo = styled.div`
 export const Copyright = styled.h2`
   color: #a2a2a2;
   font-size: 1.7rem;
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     font-size: 1.4rem;
     `}
 
   span {
     font-size: 1.4rem;
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
     font-size: 1.1rem;
     `}
   }

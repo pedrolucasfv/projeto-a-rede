@@ -45,7 +45,7 @@ const Banner = () => {
           Projeto a rede está precisando da sua ajuda! Bom Jesus do Itabapoana e
           Bom jesus do Norte sofreram com enormes quantidades de chuva e muitas
           pessoas perderam tudo, há pessoas que estão precisando de água, comida
-          e produtos básicos para sobrevivencia. <a href='/chuvas'>Clique aqui para mais informações</a>
+          e produtos básicos para sobrevivencia. <a href='/enchentes'>Clique aqui para mais informações</a>
         </S.Text>
       </S.LeftContent>
     </S.Wrapper>
