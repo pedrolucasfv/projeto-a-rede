@@ -1,6 +1,7 @@
 import * as S from './styles';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Banner = () => {
   const [fallLiquid, setFallLiquid] = useState(false);
@@ -45,7 +46,7 @@ const Banner = () => {
           Projeto a rede está precisando da sua ajuda! Bom Jesus do Itabapoana e
           Bom jesus do Norte sofreram com enormes quantidades de chuva e muitas
           pessoas perderam tudo, há pessoas que estão precisando de água, comida
-          e produtos básicos para sobrevivencia. <a href='/enchentes'>Clique aqui para mais informações</a>
+          e produtos básicos para sobrevivencia. <Link href='/enchentes'>Clique aqui para mais informações</Link>
         </S.Text>
       </S.LeftContent>
     </S.Wrapper>

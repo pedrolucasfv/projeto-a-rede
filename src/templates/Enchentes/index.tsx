@@ -59,6 +59,26 @@ const Oficinas = () => {
           '/img/enchente-image-9.jpg',
         ]}
       />
+      <Enchente
+        name="O recomeço..."
+        description="Agora é o momento de reconstrução, o projeto a rede está mobilizando café da manhã, marmitas, doações de cestas básicas, água, roupas, produtos básicos de higiene e limpeza. Além de estarem ouvindo a população para instruir a sua comunidade."
+        image={[
+          '/video/video-enchente-16.mp4',
+          '/video/video-enchente-18.mp4',
+          '/video/video-enchente-17.mp4',
+          '/video/video-enchente-16.mp4',
+          '/video/video-enchente-17.mp4',
+          '/video/video-enchente-18.mp4',
+        ]}  
+        time="Reflexão: Olhe para a sua casa e repare em todos os objetos que você tem nela, agora imagine perder tudo que você tem aí, é difícil imaginar, mas tem pessoas passando por isso. Porém mais do que recuperar objetos, é preciso reestabelecer o emocional dessas pessoas e mostrar que não estão sozinhas."
+        age=""
+        secondaryImages={[
+          '/img/enchente-image-10.jpg',
+          '/img/enchente-image-11.jpg',
+          '/img/enchente-image-12.jpg',
+          '/img/enchente-image-13.jpg',
+        ]}
+      />
       {/* <S.OficinaCardContent>
         <OficinaCard
           name="Aulas de Jiu-Jitsu"
